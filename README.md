@@ -1,27 +1,40 @@
-# React + TypeScript + Vite
+# ТЗ
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Структура сайта
 
-Currently, two official plugins are available:
+1. Главная страница - Анимация преображения пустой бетонной коробки в помещение с
+   проведенной электрикой водой и газом, после завершения анимации это становиться
+   первой страницей карусели, карусель состоит из 2.5d моделей с текстом описания
+   пакетов услуг(скидки, новости и т.д.
+2. Лица компании
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+3. 3 блока услуг (изыскания(в разработке), проект, строй)
+4. Мини статьи об решении проблем через компанию заказчика
 
-## Expanding the ESLint configuration
+5. Визуальное изображение в пунктах с инфографикой о пути работы с компанией
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+6. Преимущества компании (4-5 штук)
+7. Отзывы
 
-- Configure the top-level `parserOptions` property like this:
+8. Связь с менеджером
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+9. Концовка с кучей пунктов обо всем и ссылками на все контакты
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## БУРГЕР МЕНЮ
+
+Полная версия (при наведение на пункт нету раскрытия под пунктов, просто перенос на
+страницу)
+Мобильная(аналогично)
+
+1. Главная
+
+2. Услуги
+
+3. Контакты
+4. О компании
+
+5. Статьи
+
+# TO DO
+
+Артем - страницы (настройка Route`ов и создание страниц без дизайна, это на мне), асинхронная подгрузка (если возможно), разобраться с графиками из библы (в конце, как я уточню)
