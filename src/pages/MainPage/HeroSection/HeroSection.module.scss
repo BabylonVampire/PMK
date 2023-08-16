@@ -1,0 +1,51 @@
+.heroSection {
+	height: 100vh;
+}
+
+.contentBox {
+	height: 100%;
+	display: flex;
+	& > * {
+		display: flex;
+		flex: 1;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+	}
+}
+
+.title {
+	display: flex;
+	flex-direction: row;
+}
+
+.titleContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.logo {
+	margin-right: calc(var(--index));
+	height: calc(var(--index) * 4.5);
+	width: calc(var(--index) * 4.5);
+	background-image: url(/src/assets/images/logo.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.description {
+	color: var(--fontColorMain);
+	font-family: var(--headingFamily);
+	font-size: calc(var(--index) * 0.82);
+}
+
+.heading {
+	color: var(--fontColorMain);
+	font-family: var(--headingFamily);
+	font-size: calc(var(--index) * 2);
+}
+
+.animation {
+	// Когда будет анимашка, добавим
+}

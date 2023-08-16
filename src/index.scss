@@ -1,0 +1,44 @@
+:root {
+	--index: calc(1vh + 1vw);
+
+	//Palette
+	--mainColor: #171d3d;
+	--darkColor: #070d28;
+	--lightColor: #54609e; //#68709E
+	--superLightColor: #68709e;
+	--fontColorMain: #ffffff;
+	--fontColorDark: #b3b3b3;
+	//Palette
+
+	//Font styles
+	--headingFamily: Copperplate;
+	--mainFamily: FortuneC;
+	//Font styles
+}
+
+::-webkit-scrollbar {
+	width: 8px;
+}
+
+::-webkit-scrollbar-track {
+	background: var(--mainColor);
+}
+
+::-webkit-scrollbar-thumb {
+	border-radius: 4px;
+	background: var(--lightColor);
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: var(--superLightColor);
+}
+
+@font-face {
+	font-family: Copperplate;
+	src: url(./assets/fonts/CopperplateGothicBold/Copperplate_Gothic_Bold.ttf);
+}
+
+@font-face {
+	font-family: FortuneC;
+	src: url(./assets/fonts/FortuneC/FortuneC.ttf);
+}
