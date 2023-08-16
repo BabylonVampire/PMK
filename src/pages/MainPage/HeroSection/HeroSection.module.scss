@@ -26,7 +26,7 @@
 }
 
 .logo {
-	margin-right: calc(var(--index));
+	margin-inline-end: calc(var(--index));
 	height: calc(var(--index) * 4.5);
 	width: calc(var(--index) * 4.5);
 	background-image: url(/src/assets/images/logo.png);
