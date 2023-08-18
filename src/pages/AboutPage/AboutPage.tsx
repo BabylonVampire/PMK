@@ -1,14 +1,10 @@
-import { FC } from 'react'
-import styles from './AboutPage.module.scss'
- 
+import { FC } from 'react';
+import styles from './AboutPage.module.scss';
+
 interface IAboutPageProps {}
- 
+
 const AboutPage: FC<IAboutPageProps> = () => {
-	return (
-		<div className={styles.AboutPageWrapper}>
-			
-		</div>
-	)
-}
- 
-export default AboutPage
+	return <main className={styles.aboutPage}></main>;
+};
+
+export default AboutPage;

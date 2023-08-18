@@ -26,6 +26,6 @@
 		}
 	},
 
-	"include": ["src"],
+	"include": ["src", "scrollControll.ts"],
 	"references": [{ "path": "./tsconfig.node.json" }]
 }
