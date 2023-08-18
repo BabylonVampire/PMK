@@ -1,14 +1,14 @@
 import { FC, useEffect } from 'react';
-import HeroSection from './HeroSection/HeroSection';
-import CompanyMembersSection from './CompanyMembersSection/CompanyMembersSection';
+import HeroSection from './components/HeroSection/HeroSection';
+import CompanyMembersSection from './components/CompanyMembersSection/CompanyMembersSection';
 import styles from './MainPage.module.scss';
-import ServiceBlocksSection from './ServiceBlocksSection/ServiceBlocksSection';
-import animationStart from './utils/animationStart';
-import ReviewsSection from './ReviewsSection/ReviewsSection';
+import ServiceBlocksSection from './components/ServiceBlocksSection/ServiceBlocksSection';
+import animationStart from '../utils/animationStart';
+import ReviewsSection from './components/ReviewsSection/ReviewsSection';
 
 interface IMainPageProps {}
 
-const MainPage: FC<IMainPageProps> = ({}) => {
+const MainPage: FC<IMainPageProps> = () => {
 	useEffect(() => {
 		animationStart();
 	}, []);
