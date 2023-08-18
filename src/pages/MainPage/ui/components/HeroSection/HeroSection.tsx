@@ -1,11 +1,12 @@
 import { FC } from 'react';
 import styles from './HeroSection.module.scss';
+import Section from '@/components/Section/Section';
 
 interface IHeroSectionProps {}
 
 const HeroSection: FC<IHeroSectionProps> = ({}) => {
 	return (
-		<section className={styles.heroSection}>
+		<Section className={styles.heroSection}>
 			<div className={styles.contentBox}>
 				<div className={styles.title}>
 					<div className={styles.logo}></div>
@@ -18,7 +19,7 @@ const HeroSection: FC<IHeroSectionProps> = ({}) => {
 				</div>
 				<div className={styles.animation}></div>
 			</div>
-		</section>
+		</Section>
 	);
 };
 

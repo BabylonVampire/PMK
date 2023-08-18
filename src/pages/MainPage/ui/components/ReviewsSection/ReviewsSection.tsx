@@ -2,6 +2,7 @@ import { FC } from 'react';
 import Review from './Review/Review';
 import styles from './ReviewsSection.module.scss';
 import { Col, Row } from 'antd';
+import Section from '@/components/Section/Section';
 
 interface IReviewsSectionProps {
 	reviews: {
@@ -14,17 +15,17 @@ interface IReviewsSectionProps {
 
 const ReviewsSection: FC<IReviewsSectionProps> = ({ reviews }) => {
 	return (
-		<section className={styles.reviewsSection}>
+		<Section className={styles.reviewsSection}>
 			<Row className={styles.reviewsBox}>
 				{reviews.map((review) => {
 					return (
-						<Col span={8}>
+						<Col span={8} className={styles.column}>
 							<Review review={review} />
 						</Col>
 					);
 				})}
 			</Row>
-		</section>
+		</Section>
 	);
 };
 

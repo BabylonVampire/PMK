@@ -55,7 +55,6 @@ const animationStart = () => {
 					start: '-200px',
 					end: 'bottom',
 					trigger: block,
-					toggleActions: 'play none none',
 					scrub: true,
 				},
 			}
@@ -76,7 +75,7 @@ const animationStart = () => {
 				scrollTrigger: {
 					start: '350',
 					trigger: card,
-					toggleActions: 'play none none',
+					toggleActions: 'play none none reverse',
 				},
 			}
 		);
