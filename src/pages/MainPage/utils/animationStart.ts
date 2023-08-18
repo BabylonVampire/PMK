@@ -35,9 +35,28 @@ const animationStart = () => {
 				y: 0,
 				duration: 1,
 				scrollTrigger: {
-					start: 'top',
+					start: '-400px',
+					trigger: block,
+					toggleActions: 'play none none reverse',
+				},
+			}
+		);
+	});
+
+	serviceBlocks.forEach((block) => {
+		gsap.fromTo(
+			block,
+			{
+				top: '0em',
+			},
+			{
+				top: '14em',
+				scrollTrigger: {
+					start: '-200px',
+					end: 'bottom',
 					trigger: block,
 					toggleActions: 'play none none',
+					scrub: true,
 				},
 			}
 		);

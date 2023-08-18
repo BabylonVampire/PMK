@@ -12,7 +12,11 @@ interface IBlockProps {
 
 const Block: FC<IBlockProps> = ({ block }) => {
 	return (
-		<div className="serviceBlock" id={'' + block.id}>
+		<div
+			className="serviceBlock"
+			id={'' + block.id}
+			style={{ position: 'relative' }}
+		>
 			<div className={styles.block}>
 				<div
 					className={styles.blockPic}
