@@ -1,10 +1,10 @@
-import { FC } from 'react';
+import { FC, memo } from 'react';
 import styles from './Header.module.scss';
 import NavButton from './NavButton/NavButton';
 
 interface IHeaderProps {}
 
-const Header: FC<IHeaderProps> = () => {
+const Header: FC<IHeaderProps> = memo(() => {
 	return (
 		<header className={styles.header}>
 			<nav className={styles.nav}>
@@ -20,6 +20,6 @@ const Header: FC<IHeaderProps> = () => {
 			<div className={styles.profileContainer}></div>
 		</header>
 	);
-};
+});
 
 export default Header;

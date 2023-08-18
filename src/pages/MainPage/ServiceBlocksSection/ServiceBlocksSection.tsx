@@ -4,7 +4,7 @@ import Block from './Block/Block';
 
 interface IServiceBlocksSectionProps {}
 
-const ServiceBlocksSection: FC<IServiceBlocksSectionProps> = ({}) => {
+const ServiceBlocksSection: FC<IServiceBlocksSectionProps> = () => {
 	return (
 		<div className={styles.serviceBlocks} id="serviceBlocks">
 			<div className={styles.galleryLeft}>

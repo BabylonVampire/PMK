@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, memo } from 'react';
 import styles from './NavButton.module.scss';
 import { Link } from 'react-router-dom';
 
@@ -7,12 +7,12 @@ interface INavButtonProps {
 	link: string;
 }
 
-const NavButton: FC<INavButtonProps> = ({ children, link }) => {
+const NavButton: FC<INavButtonProps> = memo(({ children, link }) => {
 	return (
-		<a href={link} className={styles.navButton}>
+		<Link to={link} className={styles.navButton}>
 			{children}
-		</a>
+		</Link>
 	);
-};
+});
 
 export default NavButton;

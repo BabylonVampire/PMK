@@ -1,9 +1,9 @@
-import { FC } from 'react';
+import { FC, memo } from 'react';
 import styles from './Footer.module.scss';
 
 interface IFooterProps {}
 
-const Footer: FC<IFooterProps> = () => {
+const Footer: FC<IFooterProps> = memo(() => {
 	return (
 		<footer className={styles.footer}>
 			<div className={styles.mainBox}>
@@ -15,6 +15,6 @@ const Footer: FC<IFooterProps> = () => {
 			</div>
 		</footer>
 	);
-};
+});
 
 export default Footer;
