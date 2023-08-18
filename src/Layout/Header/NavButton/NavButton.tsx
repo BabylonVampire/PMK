@@ -9,9 +9,9 @@ interface INavButtonProps {
 
 const NavButton: FC<INavButtonProps> = ({ children, link }) => {
 	return (
-		<a href={link} className={styles.navButton}>
+		<Link to={link} className={styles.navButton}>
 			{children}
-		</a>
+		</Link>
 	);
 };
 
