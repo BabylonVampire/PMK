@@ -1,12 +1,12 @@
 import './App.scss';
 import Layout from './Layout/Layout';
-import MainPage from './pages/MainPage/MainPage';
+import AppRouter from './providers/router/AppRouter';
 
 const App = () => {
 	return (
 		<main className="app">
 			<Layout>
-				<MainPage />
+				<AppRouter/>
 			</Layout>
 		</main>
 	);
