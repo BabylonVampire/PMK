@@ -1,13 +1,9 @@
 import { FC } from 'react';
 import styles from './Block.module.scss';
+import { IBlock } from '@/types';
 
 interface IBlockProps {
-	block: {
-		title: string;
-		description: string;
-		image: string;
-		id: number;
-	};
+	block: IBlock
 }
 
 const Block: FC<IBlockProps> = ({ block }) => {
