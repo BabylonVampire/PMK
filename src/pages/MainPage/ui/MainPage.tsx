@@ -5,7 +5,7 @@ import styles from './MainPage.module.scss';
 import ServiceBlocksSection from './components/ServiceBlocksSection/ServiceBlocksSection';
 import animationStart from '../utils/animationStart';
 import ReviewsSection from './components/ReviewsSection/ReviewsSection';
-import { members, reviews } from '@/db';
+import { members, reviews, blocks } from '@/db';
 
 interface IMainPageProps {}
 
@@ -17,13 +17,9 @@ const MainPage: FC<IMainPageProps> = () => {
 	return (
 		<main className={styles.mainPage} id="backGround">
 			<HeroSection />
-			<CompanyMembersSection
-				members={members}
-			/>
-			<ServiceBlocksSection />
-			<ReviewsSection
-				reviews={reviews}
-			/>
+			<CompanyMembersSection members={members} />
+			<ServiceBlocksSection blocks={blocks} />
+			<ReviewsSection reviews={reviews} />
 		</main>
 	);
 };

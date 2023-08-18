@@ -1,13 +1,19 @@
 import { FC } from 'react';
 import styles from './ServiceBlocksSection.module.scss';
 import Block from './Block/Block';
+import { IBlock } from '@/types';
 
-interface IServiceBlocksSectionProps {}
+interface IServiceBlocksSectionProps {
+	blocks: IBlock[];
+}
 
-const ServiceBlocksSection: FC<IServiceBlocksSectionProps> = () => {
+const ServiceBlocksSection: FC<IServiceBlocksSectionProps> = ({ blocks }) => {
 	return (
 		<div className={styles.serviceBlocks} id="serviceBlocks">
-			<div className={styles.galleryLeft}>
+			{blocks.map((block) => (
+				<Block block={block}/>
+			))}
+			{/* <div className={styles.galleryLeft}>
 				<Block
 					block={{
 						id: 1,
@@ -34,7 +40,7 @@ const ServiceBlocksSection: FC<IServiceBlocksSectionProps> = () => {
 						image: 'https://sun9-76.userapi.com/impg/K_6EG6wRcrM2OGKN69LC_4GBAWYIk0YjljEPSw/Aic60Xo5KTc.jpg?size=1600x900&quality=96&sign=0ab0c4a0ee9f617a260ccb0bf5a96b3b&type=album',
 					}}
 				/>
-			</div>
+			</div> */}
 		</div>
 	);
 };
