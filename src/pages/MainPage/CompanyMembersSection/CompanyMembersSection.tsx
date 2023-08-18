@@ -1,6 +1,7 @@
 import { FC } from 'react';
 import styles from './CompanyMembersSection.module.scss';
 import MemberCard from './MemberCard/MemberCard';
+import { Col, Row } from 'antd';
 
 interface ICompanyMembersSectionProps {
 	members: {
@@ -16,11 +17,17 @@ const CompanyMembersSection: FC<ICompanyMembersSectionProps> = ({
 }) => {
 	return (
 		<section className={styles.companyMembers}>
-			<div className={styles.membersBox}>
+			{/* <div className={styles.membersBox}> */}
+			<Row className={styles.membersBox}>
 				{members.map((member) => {
-					return <MemberCard member={member} />;
+					return (
+						<Col span={8}>
+							<MemberCard member={member} />
+						</Col>
+					);
 				})}
-			</div>
+			</Row>
+			{/* </div> */}
 		</section>
 	);
 };
