@@ -1,6 +1,6 @@
 import { FC, Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom';
-import { MainPage } from '../../pages/MainPage';
+import { MainPage } from 'pages/MainPage';
 
 const AppRouter: FC = () => {
 	return (
