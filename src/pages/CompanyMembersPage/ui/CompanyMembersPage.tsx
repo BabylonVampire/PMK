@@ -5,9 +5,9 @@ interface ICompanyMembersPageProps {}
  
 const CompanyMembersPage: FC<ICompanyMembersPageProps> = () => {
 	return (
-		<div className={styles.CompanyMembersPageWrapper}>
+		<main className={styles.CompanyMembersPageWrapper}>
 			
-		</div>
+		</main>
 	)
 }
  
