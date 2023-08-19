@@ -1,1 +1,7 @@
-.CompanyMembersPageWrapper {}
+.CompanyMembersPageWrapper {
+	min-height: 100vh;
+	background-color: var(--mainColor);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}

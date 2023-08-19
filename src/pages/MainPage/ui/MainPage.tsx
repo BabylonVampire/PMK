@@ -1,6 +1,6 @@
 import { FC, useEffect } from 'react';
 import HeroSection from './components/HeroSection/HeroSection';
-import CompanyMembersSection from './components/CompanyMembersSection/CompanyMembersSection';
+import CompanyMembersSection from '../../../components/CompanyMembersSection/CompanyMembersSection';
 import styles from './MainPage.module.scss';
 import ServiceBlocksSection from './components/ServiceBlocksSection/ServiceBlocksSection';
 import animationStart from '../utils/animationStart';
@@ -17,7 +17,7 @@ const MainPage: FC<IMainPageProps> = () => {
 	return (
 		<main className={styles.mainPage} id="backGround">
 			<HeroSection />
-			<CompanyMembersSection members={members} />
+			<CompanyMembersSection members={members} heading='Наши сотрудники'/>
 			<ServiceBlocksSection blocks={blocks} />
 			<ReviewsSection reviews={reviews} />
 		</main>
