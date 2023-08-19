@@ -1,11 +1,11 @@
+import { blocks, members, reviews } from '@/db';
 import { FC, useEffect } from 'react';
-import HeroSection from './components/HeroSection/HeroSection';
 import CompanyMembersSection from '../../../components/CompanyMembersSection/CompanyMembersSection';
-import styles from './MainPage.module.scss';
-import ServiceBlocksSection from './components/ServiceBlocksSection/ServiceBlocksSection';
 import animationStart from '../utils/animationStart';
+import styles from './MainPage.module.scss';
+import HeroSection from './components/HeroSection/HeroSection';
 import ReviewsSection from './components/ReviewsSection/ReviewsSection';
-import { members, reviews, blocks } from '@/db';
+import ServiceBlocksSection from './components/ServiceBlocksSection/ServiceBlocksSection';
 
 interface IMainPageProps {}
 

@@ -1,12 +1,8 @@
-import { FC, memo } from 'react';
+import { FC, PropsWithChildren, memo } from 'react';
 import Header from './Header/Header';
 import Footer from './Footer/Footer';
 
-interface ILayoutProps {
-	children: React.ReactNode;
-}
-
-const Layout: FC<ILayoutProps> = memo(({ children }) => {
+const Layout: FC<PropsWithChildren> = memo(({ children }) => {
 	return (
 		<div className="layout">
 			<Header />
