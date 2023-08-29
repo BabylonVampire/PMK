@@ -1,10 +1,12 @@
 .navButton {
+	display: flex;
 	color: var(--fontColorMain);
 	font-family: var(--mainFamily);
-	padding: 15px;
 	box-sizing: border-box;
 	font-size: 1.5em;
 	text-decoration: none;
+	align-items: center;
+	margin-left: calc(var(--index));
 
 	&:hover {
 		padding-bottom: 8px;

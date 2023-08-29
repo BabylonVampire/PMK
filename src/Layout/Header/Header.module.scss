@@ -3,12 +3,40 @@
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
-	position: fixed;
-	top: 0;
-	left: 0;
-	backdrop-filter: blur(5px);
-	z-index: 100;
+	background-color: var(--mainColor);
+	height: 10vh;
 }
 .nav {
 	display: flex;
+}
+.title {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.titleContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.logo {
+	margin-inline-end: calc(var(--index) * 0.3);
+	height: calc(var(--index) * 2);
+	width: calc(var(--index) * 2);
+	background-image: url(/src/assets/images/logo.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.description {
+	color: var(--fontColorMain);
+	font-family: var(--headingFamily);
+	font-size: calc(var(--index) * 0.41);
+}
+
+.heading {
+	color: var(--fontColorMain);
+	font-family: var(--headingFamily);
+	font-size: calc(var(--index) * 1);
 }

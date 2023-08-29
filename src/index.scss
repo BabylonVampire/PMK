@@ -12,7 +12,7 @@
 
 	//Font styles
 	--headingFamily: Copperplate;
-	--mainFamily: FortuneC;
+	--mainFamily: CenturyGothic;
 	//Font styles
 }
 
@@ -41,4 +41,9 @@
 @font-face {
 	font-family: FortuneC;
 	src: url(./assets/fonts/FortuneC/FortuneC.ttf);
+}
+
+@font-face {
+	font-family: CenturyGothic;
+	src: url(./assets/fonts/CenturyGothic/centurygothic.ttf);
 }

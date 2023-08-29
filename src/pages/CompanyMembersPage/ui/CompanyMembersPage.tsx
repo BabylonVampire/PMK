@@ -1,16 +1,18 @@
-import { FC } from 'react'
-import styles from './CompanyMembersPage.module.scss'
-import { members } from '@/db'
-import CompanyMembersSection from '@/components/CompanyMembersSection/CompanyMembersSection'
- 
+import { FC } from 'react';
+import styles from './CompanyMembersPage.module.scss';
+import { members } from '@/db';
+import Member from './components/Member/Member';
+
 interface ICompanyMembersPageProps {}
- 
+
 const CompanyMembersPage: FC<ICompanyMembersPageProps> = () => {
 	return (
 		<main className={styles.CompanyMembersPageWrapper}>
-			<CompanyMembersSection members={members} heading='Наши сотрудники'/>
+			{members.map((member) => {
+				return <Member member={member} />;
+			})}
 		</main>
-	)
-}
- 
-export default CompanyMembersPage
+	);
+};
+
+export default CompanyMembersPage;

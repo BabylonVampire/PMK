@@ -2,6 +2,8 @@
 	background-color: #0e0e0e;
 	display: flex;
 	flex-direction: column;
+	z-index: 10;
+	position: relative;
 }
 .copyright {
 	height: 3vh;
@@ -21,14 +23,16 @@
 	justify-content: center;
 }
 .mainBox {
+	display: flex;
 	height: 20vh;
 	color: var(--fontColorMain);
 	font-family: var(--mainFamily);
+	flex-direction: column;
 }
 .link {
 	text-decoration: none;
 	color: var(--fontColorMain);
-	font-size: 1.4em;
+	font-size: calc(var(--index) * 0.8);
 }
 .options {
 	display: flex;

@@ -1,5 +1,5 @@
-export * from './CompanyMembersSection/CompanyMembersSection'
+export * from '../pages/MainPage/ui/components/CompanyMembersSection/CompanyMembersSection';
 // export * from './ContactLink/ContactLink'
-export * from './Heading/Heading'
-export * from './MemberCard/MemberCard'
-export * from './Section/Section'
+export * from './Heading/Heading';
+export * from '../pages/MainPage/ui/components/CompanyMembersSection/components/MemberCard/MemberCard';
+export * from './Section/Section';

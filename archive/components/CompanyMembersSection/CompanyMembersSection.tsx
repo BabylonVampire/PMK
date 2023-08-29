@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import styles from './CompanyMembersSection.module.scss';
-import MemberCard from '../MemberCard/MemberCard';
+import MemberCard from './components/MemberCard/MemberCard';
 import { Col, Row } from 'antd';
 import Section from '@/components/Section/Section';
 
@@ -16,7 +16,7 @@ interface ICompanyMembersSectionProps {
 
 const CompanyMembersSection: FC<ICompanyMembersSectionProps> = ({
 	members,
-	heading
+	heading,
 }) => {
 	return (
 		<Section className={styles.companyMembers} heading={heading}>
