@@ -4,12 +4,11 @@ import { ICard } from '@/types';
 
 interface ICardProps {
 	card: ICard;
-	bgc?: string
 }
 
-const Card: FC<ICardProps> = ({ card, bgc }) => {
+const Card: FC<ICardProps> = ({ card }) => {
 	return (
-		<div className={styles.CardWrapper} style={{backgroundColor: bgc}}>
+		<div className={styles.CardWrapper} style={{backgroundColor: card.bgc, backgroundImage: card.bgi}}>
 			<h4 className={styles.title}>{card.title}</h4>
 			<p className={styles.text}>{card.text}</p>
 			<img className={styles.img} src={card.img} alt={card.title} />

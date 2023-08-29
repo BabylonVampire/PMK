@@ -9,13 +9,13 @@ interface IMainFavorsCarouselProps {
  
 const MainFavorsCarousel: FC<IMainFavorsCarouselProps> = ({cards}) => {
 	return (
-		<div className={styles.FavorsCarouselWrapper}>
+		<section className={styles.FavorsCarouselWrapper}>
 			{cards.map(card => {
 				return (
 					<Card card={card}/>
 				)
 			})}
-		</div>
+		</section>
 	)
 }
  
