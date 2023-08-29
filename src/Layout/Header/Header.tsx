@@ -18,11 +18,11 @@ const Header: FC<IHeaderProps> = memo(() => {
 					</div>
 				</div>
 				<NavButton link="/">Главная</NavButton>
-				<NavButton link="/Services">Услуги</NavButton>
-				<NavButton link="/AboutUs">О нас</NavButton>
-				<NavButton link="/Articles">Статьи</NavButton>
-				<NavButton link="/Partners">Партнерам</NavButton>
-				<NavButton link="/Contscts">Контакты</NavButton>
+				<NavButton link="/favor">Услуги</NavButton>
+				<NavButton link="/about">О нас</NavButton>
+				<NavButton link="/articles">Статьи</NavButton>
+				<NavButton link="/partners">Партнерам</NavButton>
+				<NavButton link="/contacts">Контакты</NavButton>
 			</nav>
 			<div className={styles.profileContainer}></div>
 		</header>
