@@ -2,6 +2,7 @@ import { IArticle } from "@/types";
 
 export const articles: IArticle[] = [
 	{
+		id: 1,
 		title: 'Как какать',
 		date: '30/08/23',
 		preview: '',

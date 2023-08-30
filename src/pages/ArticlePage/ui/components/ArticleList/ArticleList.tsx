@@ -12,7 +12,7 @@ const ArticleList: FC<IArticleListProps> = ({ articles }) => {
 		<section className={styles.ArticlesListWrapper}>
 			<ul className={styles.ArticlesList}>
 				{articles.map((article) => {
-					return <ArticleCard article={article} />;
+					return <ArticleCard key={article.id} article={article} />;
 				})}
 			</ul>
 		</section>
