@@ -8,7 +8,10 @@ interface ICardProps {
 
 const Card: FC<ICardProps> = ({ card }) => {
 	return (
-		<div className={styles.CardWrapper} style={{backgroundColor: card.bgc, backgroundImage: card.bgi}}>
+		<div
+			className={styles.CardWrapper}
+			style={{ background: card.bgc, backgroundImage: card.bgi }}
+		>
 			<h4 className={styles.title}>{card.title}</h4>
 			<p className={styles.text}>{card.text}</p>
 			<img className={styles.img} src={card.img} alt={card.title} />

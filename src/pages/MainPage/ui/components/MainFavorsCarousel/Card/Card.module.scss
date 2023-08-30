@@ -15,15 +15,15 @@
 }
 .title {
 	display: flex;
-	font-family: var(--mainFamily);
-	font-size: calc(var(--index) * 1.5);
-	color: var(--fontColorMain);
+	font-family: var(--heading-family);
+	font-size: var(--font-size-l);
+	color: var(--font-color-main);
 }
 .text {
 	margin-top: calc(var(--index));
-	font-family: var(--mainFamily);
-	font-size: calc(var(--index) * 1);
-	color: var(--fontColorDark);
+	font-family: var(--main-family);
+	font-size: var(--font-size-m);
+	color: var(--font-color-dark);
 }
 .img {
 	width: 100%;
