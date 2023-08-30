@@ -8,6 +8,12 @@ export const favors: IFavor[] = [
 		description: [
 			{
 				text: 'Легко и удобно'
+			},
+			{
+				text: 'Дёшево'
+			},
+			{
+				text: 'Быстро'
 			}
 		]
 	}
