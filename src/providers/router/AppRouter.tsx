@@ -8,7 +8,7 @@ import styles from './AppRouter.module.scss';
 
 const AppRouter: FC = () => {
 	return (
-		<Suspense fallback={<div className={styles.Loader}>Loading...</div>}>
+		<Suspense fallback={<div className={styles.Loader}>Загрузка...</div>}>
 			<Routes>
 				<Route path="/" element={<MainPage />} />
 				<Route path="/about" element={<AboutPage />} />
