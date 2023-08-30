@@ -1,22 +1,18 @@
 import { FC, memo } from 'react';
 import styles from './Header.module.scss';
 import NavButton from './NavButton/NavButton';
+import Logo from './Logo/Logo';
+import { useNavigate } from 'react-router-dom';
 
 interface IHeaderProps {}
 
 const Header: FC<IHeaderProps> = memo(() => {
+	const nav = useNavigate()
+
 	return (
 		<header className={styles.header}>
 			<nav className={styles.nav}>
-				<div className={styles.title}>
-					<div className={styles.logo}></div>
-					<div className={styles.titleContainer}>
-						<p className={styles.heading}>ПМК РАЗВИТИЕ</p>
-						<p className={styles.description}>
-							ПРОЕКТНО - МОНТАЖНАЯ КОМПАНИЯ
-						</p>
-					</div>
-				</div>
+				<Logo hover onClick={() => nav('/')}/>
 				<NavButton link="/">Главная</NavButton>
 				<NavButton link="/favor">Услуги</NavButton>
 				<NavButton link="/about">О нас</NavButton>
