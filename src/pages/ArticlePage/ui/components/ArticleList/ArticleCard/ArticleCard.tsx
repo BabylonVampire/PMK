@@ -1,17 +1,19 @@
-import { FC } from 'react'
-import styles from './ArticleCard.module.scss'
-import { IArticle } from '@/types'
- 
+import { IArticle } from '@/types';
+import { FC } from 'react';
+import styles from './ArticleCard.module.scss';
+
 interface IArticleCardProps {
-	article: IArticle
+	article: IArticle;
 }
- 
-const ArticleCard: FC<IArticleCardProps> = ({article}) => {
+
+const ArticleCard: FC<IArticleCardProps> = ({ article }) => {
 	return (
-		<div className={styles.ArticleCardWrapper}>
-			{article.title}
-		</div>
-	)
-}
- 
-export default ArticleCard
+		<li className={styles.ArticleCardWrapper}>
+			<time className={styles.date}>{article.date}</time>
+			<h3 className={styles.title}>{article.title}</h3>
+			<img className={styles.preview} src={article.preview} alt={article.title} />
+		</li>
+	);
+};
+
+export default ArticleCard;

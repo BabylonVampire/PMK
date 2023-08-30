@@ -1,0 +1,22 @@
+.ArticleCardWrapper {
+	box-sizing: border-box;
+	padding: 20px;
+	width: 100%;
+	list-style: none;
+	background-color: var(--font-color-main);
+	border-radius: 5px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	cursor: pointer;
+}
+.title {
+	width: 75%;
+}
+.date {
+	width: 5%;
+}
+.preview {
+	width: 20%;
+}

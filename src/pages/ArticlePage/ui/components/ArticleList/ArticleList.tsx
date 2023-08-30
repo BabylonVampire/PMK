@@ -10,11 +10,11 @@ interface IArticleListProps {
 const ArticleList: FC<IArticleListProps> = ({ articles }) => {
 	return (
 		<section className={styles.ArticlesListWrapper}>
-			<div className={styles.ArticlesList}>
+			<ul className={styles.ArticlesList}>
 				{articles.map((article) => {
 					return <ArticleCard article={article} />;
 				})}
-			</div>
+			</ul>
 		</section>
 	);
 };
