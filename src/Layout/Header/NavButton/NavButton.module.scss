@@ -1,7 +1,7 @@
 .navButton {
 	display: flex;
-	color: var(--fontColorMain);
-	font-family: var(--mainFamily);
+	color: var(--font-color-main);
+	font-family: var(--main-family);
 	box-sizing: border-box;
 	font-size: 1.5em;
 	text-decoration: none;
@@ -9,7 +9,7 @@
 	margin-left: calc(var(--index));
 
 	&:hover {
-		padding-bottom: 8px;
-		border-bottom: 2px solid var(--fontColorMain); //theme?
+		padding-top: 2px;
+		border-bottom: 2px solid var(--font-color-main); //theme?
 	}
 }

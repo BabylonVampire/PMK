@@ -35,14 +35,14 @@
 }
 
 .description {
-	color: var(--fontColorMain);
-	font-family: var(--headingFamily);
+	color: var(--font-color-main);
+	font-family: var(--heading-family);
 	font-size: calc(var(--index) * 0.82);
 }
 
 .heading {
-	color: var(--fontColorMain);
-	font-family: var(--headingFamily);
+	color: var(--font-color-main);
+	font-family: var(--heading-family);
 	font-size: calc(var(--index) * 2);
 }
 

@@ -9,7 +9,7 @@
 	justify-content: center;
 	align-items: center;
 	overflow: hidden;
-	background-color: var(--mainColor);
+	background-color: var(--main-color);
 	& > * {
 		flex: 1;
 	}
@@ -21,13 +21,13 @@
 		background-repeat: no-repeat;
 	}
 	&Title {
-		font-family: var(--headingFamily);
+		font-family: var(--heading-family);
 		font-size: calc(var(--index) * 1.5);
-		color: var(--fontColorMain);
+		color: var(--font-color-main);
 	}
 	&Description {
-		font-family: var(--mainFamily);
+		font-family: var(--main-family);
 		font-size: calc(var(--index) * 1.2);
-		color: var(--fontColorDark);
+		color: var(--font-color-dark);
 	}
 }

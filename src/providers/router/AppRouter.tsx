@@ -1,17 +1,19 @@
+import { ArticlePage } from '@/pages/ArticlePage';
+import { FavorPage } from '@/pages/FavorPage';
+import { AboutPage } from '@pages/AboutPage';
+import { MainPage } from '@pages/MainPage';
 import { FC, Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom';
-import { MainPage } from '@pages/MainPage';
-import { AboutPage } from '@pages/AboutPage';
 import styles from './AppRouter.module.scss';
-import { FavorPage } from '@/pages/FavorPage';
 
 const AppRouter: FC = () => {
 	return (
-		<Suspense fallback={<div className={styles.Loader}>Loading...</div>}>
+		<Suspense fallback={<div className={styles.Loader}>Загрузка...</div>}>
 			<Routes>
 				<Route path="/" element={<MainPage />} />
 				<Route path="/about" element={<AboutPage />} />
-				<Route path="/favor" element={<FavorPage/>}></Route>
+				<Route path="/favor" element={<FavorPage />}></Route>
+				<Route path="/articles" element={<ArticlePage />}></Route>
 			</Routes>
 		</Suspense>
 	);
