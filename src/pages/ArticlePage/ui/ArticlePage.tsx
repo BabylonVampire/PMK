@@ -1,4 +1,4 @@
-import { articles } from '@/db/articles';
+import { articles } from '@/db';
 import { FC } from 'react';
 import styles from './ArticlePage.module.scss';
 import ArticleList from './components/ArticleList/ArticleList';

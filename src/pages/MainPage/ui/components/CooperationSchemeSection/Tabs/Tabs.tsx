@@ -1,8 +1,9 @@
 import { FC, useState } from 'react';
 import styles from './Tabs.module.scss';
+import { ICooperationTab } from '@/types';
 
 interface ITabsProps {
-	tabContent: { text: string; tabHeading: string; icon: React.ReactNode }[]; //;
+	tabContent: ICooperationTab[]; //;
 }
 
 const Tabs: FC<ITabsProps> = ({ tabContent }) => {
