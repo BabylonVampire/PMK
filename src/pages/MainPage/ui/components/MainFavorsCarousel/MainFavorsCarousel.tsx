@@ -1,90 +1,91 @@
-import { FC, useEffect, useState } from 'react';
+import { FC, useEffect, useRef, useState } from 'react';
 import styles from './MainFavorsCarousel.module.scss';
 import { ICard } from '@/types';
 import Card from './Card/Card';
 import { ArrowLeftOutlined, ArrowRightOutlined } from '@ant-design/icons';
+import './MainFavorsCarousel.module.scss';
 
 interface IMainFavorsCarouselProps {
 	cards: ICard[];
 }
 
 const MainFavorsCarousel: FC<IMainFavorsCarouselProps> = ({ cards }) => {
-	const [currentSlide, setCurrentSlide] = useState<number>(0);
-	const [visibleCards, setVisibleCards] = useState<number>(3);
-
-	const getVisibleCards = (windowWidth: number) => {
-		if (windowWidth >= 1600) {
-			return 5;
-		}
-		if (windowWidth >= 1200 && windowWidth < 1400) {
-			return 4;
-		}
-		if (windowWidth >= 1000 && windowWidth < 1200) {
-			return 3;
-		}
-		if (windowWidth >= 768 && windowWidth < 1000) {
-			return 2;
-		}
-		if (windowWidth < 768) {
-			return 1;
-		}
-	};
+	const [index, setIndex] = useState(0);
+	const [width, setWidth] = useState(window.innerWidth);
+	const [count, setCount] = useState(1);
+	const carouselRef = useRef<HTMLDivElement>(null);
 
 	useEffect(() => {
 		const handleResize = () => {
-			const windowWidth = window.innerWidth;
-			const newVisibleCards = getVisibleCards(windowWidth);
-			if (newVisibleCards) {
-				setVisibleCards(newVisibleCards);
-			}
+			setWidth(window.innerWidth);
 		};
 		window.addEventListener('resize', handleResize);
-		handleResize();
 		return () => {
 			window.removeEventListener('resize', handleResize);
 		};
 	}, []);
 
-	const nextSlide = () => {
-		if (currentSlide === cards.length - 1) {
-			setCurrentSlide(0);
+	useEffect(() => {
+		if (width < 600) {
+			setCount(1);
+		} else if (width < 900 && width > 600) {
+			setCount(2);
+		} else if (width < 1600 && width > 900) {
+			setCount(3);
+		} else if (width > 1600) {
+			setCount(4);
+		}
+	}, [width]);
+
+	useEffect(() => {
+		// прокручиваем карусель до текущего индекса с анимацией
+		if (carouselRef.current) {
+			carouselRef.current.style.transition = 'transform 0.5s ease-in-out';
+			carouselRef.current.style.transform = `translateX(${
+				(cards.length / 2 +
+					(count % 2 === 0 ? 0 : 0.5) -
+					Math.round(count / 2)) *
+					320 -
+				index * 320
+			}px)`;
+			console.log(index, count);
+		}
+	}, [index, count]);
+
+	const handlePrev = () => {
+		if (index > 0) {
+			setIndex(index - 1);
 		} else {
-			setCurrentSlide(currentSlide + 1);
+			setIndex(cards.length - count);
 		}
 	};
 
-	const prevSlide = () => {
-		if (currentSlide === 0) {
-			setCurrentSlide(cards.length - 1);
+	const handleNext = () => {
+		if (index < cards.length - count) {
+			setIndex(index + 1);
 		} else {
-			setCurrentSlide(currentSlide - 1);
+			setIndex(0);
 		}
 	};
+
 	return (
-		<section className={styles.FavorsCarouselWrapper}>
-			<ArrowLeftOutlined className={styles.arrow} onClick={prevSlide} />
-			<div className={styles.cardsContainer}>
-				{/* {cards.map(card => {
-				return (
-					<Card card={card}/>
-				)
-			})} */}
-				{Array.from({ length: visibleCards }, (_, i) => (
-					<Card
-						card={
-							cards[
-								(currentSlide -
-									Math.floor(visibleCards / 2) +
-									i +
-									cards.length) %
-									cards.length
-							]
-						}
-					/>
+		<div className={styles.carousel}>
+			<div className={styles.cards} ref={carouselRef}>
+				{cards.map((card) => (
+					<Card card={card} />
 				))}
 			</div>
-			<ArrowRightOutlined className={styles.arrow} onClick={nextSlide} />
-		</section>
+			<div className={styles.buttons}>
+				<ArrowLeftOutlined
+					onClick={handlePrev}
+					className={styles.button}
+				/>
+				<ArrowRightOutlined
+					onClick={handleNext}
+					className={styles.button}
+				/>
+			</div>
+		</div>
 	);
 };
 

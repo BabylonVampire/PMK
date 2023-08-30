@@ -1,5 +1,4 @@
-import { FC, useEffect } from 'react';
-import animationStart from '../utils/animationStart';
+import { FC } from 'react';
 import styles from './MainPage.module.scss';
 import HeroSection from './components/HeroSection/HeroSection';
 import AboutSection from './components/AboutSection/AboutSection';
@@ -10,15 +9,11 @@ import { cards } from '@/db';
 interface IMainPageProps {}
 
 const MainPage: FC<IMainPageProps> = () => {
-	useEffect(() => {
-		animationStart();
-	}, []);
-
 	return (
-		<main className={styles.mainPage} id="backGround">
+		<main className={styles.mainPage}>
 			<HeroSection />
 			<AboutSection />
-			<MainFavorsCarousel cards={cards}/>
+			<MainFavorsCarousel cards={cards} />
 			<CooperationSchemeSection />
 		</main>
 	);
