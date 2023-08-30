@@ -1,6 +1,7 @@
 export interface IArticle {
 	title: string
 	date: string
+	preview?: string
 	content: IArticleContent[]
 }
 export type IArticleContent = {
