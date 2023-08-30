@@ -12,7 +12,7 @@ const FavorList: FC<IFavorListProps> = ({ favors }) => {
 		<section className={styles.FavorListWrapper}>
 			<div className={styles.FavorList}>
 				{favors.map((favor) => {
-					return <FavorCard favor={favor} />;
+					return <FavorCard key={favor.id} favor={favor} />;
 				})}
 			</div>
 		</section>

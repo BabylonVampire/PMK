@@ -15,7 +15,7 @@ const FavorCard: FC<IFavorCardProps> = ({favor}) => {
 			<ul className={styles.descriptionList}>
 				{favor.description.map(item => {
 					return(
-						<li className={styles.descriptionItem}>{item.text}</li>
+						<li key={item.id} className={styles.descriptionItem}>{item.text}</li>
 					)
 				})}
 			</ul>
