@@ -2,18 +2,22 @@
 	--index: calc(1vh + 1vw);
 
 	//Palette
-	--mainColor: #171d3d;
-	--darkColor: #070d28;
-	--lightColor: #54609e; //#68709E
-	--superLightColor: #68709e;
-	--fontColorMain: #ffffff;
-	--fontColorDark: #b3b3b3;
+	--main-color: #171d3d;
+	--dark-color: #070d28;
+	--light-color: #54609e; //#68709E
+	--super-light-color: #68709e;
+	--font-color-main: #ffffff;
+	--font-color-dark: #b3b3b3;
+	--font-color-main-inverted: #000000;
 	//Palette
 
 	//Font styles
-	--headingFamily: Copperplate;
-	--mainFamily: CenturyGothic;
+	--heading-family: Copperplate;
+	--main-family: CenturyGothic;
 	//Font styles
+	--font-size-s: calc(var(--index) * 0.7);
+	--font-size-m: calc(var(--index) * 1);
+	--font-size-l: calc(var(--index) * 1.5);
 }
 
 ::-webkit-scrollbar {
@@ -21,16 +25,16 @@
 }
 
 ::-webkit-scrollbar-track {
-	background: var(--mainColor);
+	background: var(--main-color);
 }
 
 ::-webkit-scrollbar-thumb {
 	border-radius: 4px;
-	background: var(--lightColor);
+	background: var(--light-color);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-	background: var(--superLightColor);
+	background: var(--super-light-color);
 }
 
 @font-face {

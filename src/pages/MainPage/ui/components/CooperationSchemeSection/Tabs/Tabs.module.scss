@@ -4,7 +4,7 @@
 	flex-direction: column;
 }
 .tabContainer {
-	border-top: solid var(--fontColorDark) 2px;
+	border-top: solid var(--font-color-dark) 2px;
 	width: 100%;
 	display: flex;
 	flex-direction: row;
@@ -14,9 +14,9 @@
 .tab {
 	display: flex;
 	margin: calc(var(--index));
-	font-family: var(--mainFamily);
+	font-family: var(--main-family);
 	font-size: calc(var(--index) * 1);
-	color: var(--fontColorDark);
+	color: var(--font-color-dark);
 	cursor: pointer;
 	flex-direction: column;
 	align-items: center;
@@ -24,9 +24,9 @@
 }
 .tabText {
 	margin: calc(var(--index));
-	font-family: var(--mainFamily);
+	font-family: var(--main-family);
 	font-size: calc(var(--index) * 1);
-	color: var(--fontColorDark);
+	color: var(--font-color-dark);
 }
 .heading {
 	margin-top: calc(var(--index) * 0.5);

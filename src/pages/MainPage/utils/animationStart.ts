@@ -9,9 +9,9 @@ const animationStart = () => {
 
 	gsap.fromTo(
 		'#backGround',
-		{ backgroundColor: '#171d3d' }, //var(--mainColor)
+		{ backgroundColor: '#171d3d' }, //var(--main-color)
 		{
-			backgroundColor: '#070d28', //var(--darkColor)
+			backgroundColor: '#070d28', //var(--dark-color)
 			duration: 1,
 			scrollTrigger: {
 				start: 'top',

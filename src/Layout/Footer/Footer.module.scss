@@ -7,8 +7,8 @@
 }
 .copyright {
 	height: 3vh;
-	color: var(--fontColorDark);
-	font-family: var(--mainFamily);
+	color: var(--font-color-dark);
+	font-family: var(--main-family);
 	background-color: #000000;
 	display: flex;
 	align-items: center;
@@ -25,13 +25,13 @@
 .mainBox {
 	display: flex;
 	height: 20vh;
-	color: var(--fontColorMain);
-	font-family: var(--mainFamily);
+	color: var(--font-color-main);
+	font-family: var(--main-family);
 	flex-direction: column;
 }
 .link {
 	text-decoration: none;
-	color: var(--fontColorMain);
+	color: var(--font-color-main);
 	font-size: calc(var(--index) * 0.8);
 }
 .options {

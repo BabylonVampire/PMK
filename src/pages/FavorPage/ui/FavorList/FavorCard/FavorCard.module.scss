@@ -1,0 +1,19 @@
+.FavorCardWrapper {
+	width: 250px;
+	height: 400px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	> * {
+		color: var(--font-color-main-inverted);
+		font-size: var(--font-size-s);
+	}
+}
+.infoBtn {
+	width: 100%;
+	background-color: var(--main-color);
+	border: none;
+	color: var(--font-color-main);
+	font-size: var(--font-size-s);
+}

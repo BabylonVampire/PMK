@@ -24,20 +24,20 @@
 	}
 	&Name {
 		margin-top: calc(var(--index) * 0.3);
-		font-family: var(--mainFamily);
-		color: var(--fontColorMain);
+		font-family: var(--main-family);
+		color: var(--font-color-main);
 		font-size: calc(var(--index));
 	}
 	&Text {
-		font-family: var(--mainFamily);
-		color: var(--fontColorDark);
+		font-family: var(--main-family);
+		color: var(--font-color-dark);
 		font-size: calc(var(--index) * 0.85);
 		line-break: anywhere;
 		margin-bottom: calc(var(--index));
 	}
 	&Post {
-		font-family: var(--mainFamily);
-		color: var(--fontColorDark);
+		font-family: var(--main-family);
+		color: var(--font-color-dark);
 		font-size: calc(var(--index));
 	}
 }
