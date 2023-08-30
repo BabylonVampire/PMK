@@ -1,11 +1,12 @@
 import { FC } from 'react';
 import styles from './AboutSection.module.scss';
+import Section from '@/components/Section/Section';
 
 interface IAboutSectionProps {}
 
 const AboutSection: FC<IAboutSectionProps> = ({}) => {
 	return (
-		<section className={styles.aboutSection}>
+		<Section className={styles.aboutSection}>
 			<div className={styles.innerContainer}>
 				<div className={styles.pictureBox}>
 					<div className={styles.picture}></div>
@@ -31,7 +32,7 @@ const AboutSection: FC<IAboutSectionProps> = ({}) => {
 					</div>
 				</div>
 			</div>
-		</section>
+		</Section>
 	);
 };
 

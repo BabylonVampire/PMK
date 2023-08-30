@@ -4,6 +4,7 @@ import { ICard } from '@/types';
 import Card from './Card/Card';
 import { ArrowLeftOutlined, ArrowRightOutlined } from '@ant-design/icons';
 import './MainFavorsCarousel.module.scss';
+import Section from '@/components/Section/Section';
 
 interface IMainFavorsCarouselProps {
 	cards: ICard[];
@@ -38,7 +39,6 @@ const MainFavorsCarousel: FC<IMainFavorsCarouselProps> = ({ cards }) => {
 	}, [width]);
 
 	useEffect(() => {
-		// прокручиваем карусель до текущего индекса с анимацией
 		if (carouselRef.current) {
 			carouselRef.current.style.transition = 'transform 0.5s ease-in-out';
 			carouselRef.current.style.transform = `translateX(${
@@ -48,7 +48,6 @@ const MainFavorsCarousel: FC<IMainFavorsCarouselProps> = ({ cards }) => {
 					320 -
 				index * 320
 			}px)`;
-			console.log(index, count);
 		}
 	}, [index, count]);
 
@@ -69,23 +68,21 @@ const MainFavorsCarousel: FC<IMainFavorsCarouselProps> = ({ cards }) => {
 	};
 
 	return (
-		<div className={styles.carousel}>
-			<div className={styles.cards} ref={carouselRef}>
-				{cards.map((card) => (
-					<Card card={card} />
-				))}
+		<Section className={styles.carouselBox}>
+			<ArrowLeftOutlined onClick={handlePrev} className={styles.button} />
+			<div className={styles.carousel}>
+				<div className={styles.cards} ref={carouselRef}>
+					{cards.map((card) => (
+						<Card card={card} />
+					))}
+				</div>
+				<div className={styles.buttonBox}></div>
 			</div>
-			<div className={styles.buttons}>
-				<ArrowLeftOutlined
-					onClick={handlePrev}
-					className={styles.button}
-				/>
-				<ArrowRightOutlined
-					onClick={handleNext}
-					className={styles.button}
-				/>
-			</div>
-		</div>
+			<ArrowRightOutlined
+				onClick={handleNext}
+				className={styles.button}
+			/>
+		</Section>
 	);
 };
 

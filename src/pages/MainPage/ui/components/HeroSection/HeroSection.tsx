@@ -1,6 +1,7 @@
 import { FC } from 'react';
 import styles from './HeroSection.module.scss';
 import { Carousel } from 'antd';
+import Section from '@/components/Section/Section';
 
 interface IHeroSectionProps {}
 
@@ -35,7 +36,7 @@ const contentStyle_4: React.CSSProperties = {
 
 const HeroSection: FC<IHeroSectionProps> = ({}) => {
 	return (
-		<section className={styles.heroSection}>
+		<Section className={styles.heroSection}>
 			<Carousel autoplay>
 				<div>
 					<div style={contentStyle_1} className={styles.slide} />
@@ -50,7 +51,7 @@ const HeroSection: FC<IHeroSectionProps> = ({}) => {
 					<div style={contentStyle_4} className={styles.slide} />
 				</div>
 			</Carousel>
-		</section>
+		</Section>
 	);
 };
 

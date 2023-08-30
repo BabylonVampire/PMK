@@ -2,7 +2,7 @@
 	height: calc(var(--index) * 25);
 }
 .slide {
-	animation: slowScroll 3s linear infinite forwards alternate;
+	animation: slowScroll 5s linear infinite forwards alternate;
 }
 
 @-webkit-keyframes slowScroll {

@@ -3,6 +3,9 @@
 	display: flex;
 	flex-direction: column;
 }
+.tab:hover {
+	color: var(--font-color-main);
+}
 .tabContainer {
 	border-top: solid var(--font-color-dark) 2px;
 	width: 100%;
