@@ -11,24 +11,36 @@ const Footer: FC<IFooterProps> = memo(() => {
 			<div className={styles.FooterContainer}>
 				<div className={styles.mainBox}>
 					<ul className={styles.optionsCol}>
-						<Link to="/" className={styles.link}>
-							Главная
-						</Link>
-						<Link to="/favor" className={styles.link}>
-							Услуги
-						</Link>
-						<Link to="/about" className={styles.link}>
-							О нас
-						</Link>
-						<Link to="/articles" className={styles.link}>
-							Статьи
-						</Link>
-						<Link to="/partners" className={styles.link}>
-							Партнерам
-						</Link>
-						<Link to="/contacts" className={styles.link}>
-							Контакты
-						</Link>
+						<li>
+							<Link to="/" className={styles.link}>
+								Главная
+							</Link>
+						</li>
+						<li>
+							<Link to="/favor" className={styles.link}>
+								Услуги
+							</Link>
+						</li>
+						<li>
+							<Link to="/about" className={styles.link}>
+								О нас
+							</Link>
+						</li>
+						<li>
+							<Link to="/articles" className={styles.link}>
+								Статьи
+							</Link>
+						</li>
+						<li>
+							<Link to="/partners" className={styles.link}>
+								Партнерам
+							</Link>
+						</li>
+						<li>
+							<Link to="/contacts" className={styles.link}>
+								Контакты
+							</Link>
+						</li>
 					</ul>
 					<ul className={styles.contactsCol}></ul>
 				</div>
