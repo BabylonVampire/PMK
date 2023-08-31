@@ -3,19 +3,23 @@ import styles from './Tabs.module.scss';
 import { ICooperationTab } from '@/types';
 
 interface ITabsProps {
-	tabContent: ICooperationTab[]; //;
+	tabContent: ICooperationTab[];
 }
 
 const Tabs: FC<ITabsProps> = ({ tabContent }) => {
-	const [tab, setTab] = useState<number>(0);
+	const [currentTab, setTab] = useState<number>(0);
 	return (
 		<div className={styles.tabBox}>
-			<div className={styles.tabText}>{tabContent[tab].text}</div>
+			<div className={styles.tabText}>{tabContent[currentTab].text}</div>
 			<div className={styles.tabContainer}>
 				{tabContent.map((tab) => {
 					return (
 						<div
-							className={styles.tab}
+							className={
+								tabContent.indexOf(tab) === currentTab
+									? styles.selectedTab
+									: styles.tab
+							}
 							onClick={() => setTab(tabContent.indexOf(tab))}
 						>
 							{tab.icon}

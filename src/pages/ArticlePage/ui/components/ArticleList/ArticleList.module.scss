@@ -1,8 +1,12 @@
 .ArticlesListWrapper {
-	background-color: var(--dark-color);
+	width: 90%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 .ArticlesList {
-	max-width: 1600px;
+	width: 100%;
 	margin: 0 auto;
 	display: flex;
 	flex-direction: column;

@@ -7,23 +7,31 @@
 	color: var(--font-color-main);
 }
 .tabContainer {
-	border-top: solid var(--font-color-dark) 2px;
 	width: 100%;
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
 }
-.tab {
+.tab,
+.selectedTab {
 	display: flex;
-	margin: calc(var(--index));
+	padding: calc(var(--index));
 	font-family: var(--main-family);
 	font-size: calc(var(--index) * 1);
-	color: var(--font-color-dark);
 	cursor: pointer;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	flex: 1;
+}
+.tab {
+	border-top: solid var(--font-color-dark) 2px;
+	color: var(--font-color-dark);
+}
+.selectedTab {
+	border-top: solid var(--font-color-main) 2px;
+	color: var(--font-color-main);
 }
 .tabText {
 	margin: calc(var(--index));

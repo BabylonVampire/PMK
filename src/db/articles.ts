@@ -1,31 +1,32 @@
-import { IArticle } from "@/types";
+import { IArticle } from '@/types';
 
 export const articles: IArticle[] = [
 	{
 		id: 1,
 		title: 'Как какать',
-		date: '30/08/23',
+		date: {
+			date: 30,
+			month: 'Августа',
+			year: '2023',
+		},
 		preview: '',
 		content: [
 			{
 				type: 'heading',
-				value: 'Глава 1'
+				value: 'Глава 1',
 			},
 			{
 				type: 'text',
-				value: 'Какать просто'
+				value: 'Какать просто',
 			},
 			{
 				type: 'image',
-				value: 'src/assets/images/about.png'
+				value: 'src/assets/images/about.png',
 			},
 			{
 				type: 'list',
-				value: [
-					'Садимся',
-					'Срём-с'
-				]
+				value: ['Садимся', 'Срём-с'],
 			},
-		]
-	}
-]
+		],
+	},
+];

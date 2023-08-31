@@ -7,13 +7,12 @@ import { useNavigate } from 'react-router-dom';
 interface IHeaderProps {}
 
 const Header: FC<IHeaderProps> = memo(() => {
-	const nav = useNavigate()
+	const nav = useNavigate();
 
 	return (
 		<header className={styles.header}>
 			<nav className={styles.nav}>
-				<Logo hover onClick={() => nav('/')}/>
-				<NavButton link="/">Главная</NavButton>
+				<Logo hover onClick={() => nav('/')} />
 				<NavButton link="/favor">Услуги</NavButton>
 				<NavButton link="/about">О нас</NavButton>
 				<NavButton link="/articles">Статьи</NavButton>

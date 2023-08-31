@@ -9,7 +9,6 @@
 	align-items: center;
 	justify-content: center;
 	width: 960px;
-	margin: 0 20px;
 	flex-direction: column;
 	overflow: hidden;
 }
@@ -38,8 +37,8 @@
 		width: 960px;
 	}
 }
-@media (min-width: 1600px) {
-	.carousel {
-		width: 1280px;
-	}
-}
+// @media (min-width: 1600px) {
+// 	.carousel {
+// 		width: 1280px;
+// 	}
+// }

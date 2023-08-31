@@ -9,9 +9,17 @@ interface IArticleCardProps {
 const ArticleCard: FC<IArticleCardProps> = ({ article }) => {
 	return (
 		<li className={styles.ArticleCardWrapper}>
-			<time className={styles.date}>{article.date}</time>
+			<div className={styles.fullDate}>
+				<time className={styles.date}>{article.date.date}</time>
+				<time className={styles.month}>{article.date.month}</time>
+				{/* <time className={styles.date}>{article.date.date}</time> */}
+			</div>
 			<h3 className={styles.title}>{article.title}</h3>
-			<img className={styles.preview} src={article.preview} alt={article.title} />
+			<img
+				className={styles.preview}
+				src={article.preview}
+				alt={article.title}
+			/>
 		</li>
 	);
 };
