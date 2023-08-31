@@ -14,8 +14,17 @@ const Footer: FC<IFooterProps> = memo(() => {
 						<Link to="/" className={styles.link}>
 							Главная
 						</Link>
+						<Link to="/favor" className={styles.link}>
+							Услуги
+						</Link>
 						<Link to="/about" className={styles.link}>
 							О нас
+						</Link>
+						<Link to="/articles" className={styles.link}>
+							Статьи
+						</Link>
+						<Link to="/partners" className={styles.link}>
+							Партнерам
 						</Link>
 						<Link to="/contacts" className={styles.link}>
 							Контакты

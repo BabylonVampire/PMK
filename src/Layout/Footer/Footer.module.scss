@@ -40,4 +40,5 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	margin: calc(var(--index) * 0.5);
 }
