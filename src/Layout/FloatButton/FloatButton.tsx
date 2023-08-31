@@ -2,14 +2,12 @@ import { FC } from 'react';
 import styles from './FloatButton.module.scss';
 import { PhoneOutlined } from '@ant-design/icons';
 
-interface IFloatButtonProps {}
-
-const FloatButton: FC<IFloatButtonProps> = ({}) => {
+const FloatButton: FC = () => {
 	return (
 		<div className={styles.floatButtonContainer}>
-			<button className={styles.floatButton}>
+			<a href='tel:+79260820975' className={styles.floatButton}>
 				<PhoneOutlined />
-			</button>
+			</a>
 		</div>
 	);
 };
