@@ -6,28 +6,28 @@ import Section from '@/components/Section/Section';
 interface IHeroSectionProps {}
 
 const contentStyle_1: React.CSSProperties = {
-	height: 'calc(var(--index) * 25)',
+	height: '60vh',
 	backgroundSize: 'cover',
 	backgroundRepeat: 'no-repeat',
 	backgroundPosition: 'center center',
 	backgroundImage: `url(/src/assets/images/slide_1.jpg)`,
 };
 const contentStyle_2: React.CSSProperties = {
-	height: 'calc(var(--index) * 25)',
+	height: '60vh',
 	backgroundSize: 'cover',
 	backgroundRepeat: 'no-repeat',
 	backgroundPosition: 'center center',
 	backgroundImage: `url(/src/assets/images/slide_2.jpg)`,
 };
 const contentStyle_3: React.CSSProperties = {
-	height: 'calc(var(--index) * 25)',
+	height: '60vh',
 	backgroundSize: 'cover',
 	backgroundRepeat: 'no-repeat',
 	backgroundPosition: 'center center',
 	backgroundImage: `url(/src/assets/images/slide_3.jpg)`,
 };
 const contentStyle_4: React.CSSProperties = {
-	height: 'calc(var(--index) * 25)',
+	height: '60vh',
 	backgroundSize: 'cover',
 	backgroundRepeat: 'no-repeat',
 	backgroundPosition: 'center center',
@@ -36,7 +36,7 @@ const contentStyle_4: React.CSSProperties = {
 
 const HeroSection: FC<IHeroSectionProps> = ({}) => {
 	return (
-		<Section className={styles.heroSection}>
+		<section className={styles.heroSection}>
 			<Carousel autoplay>
 				<div>
 					<div style={contentStyle_1} className={styles.slide} />
@@ -51,7 +51,7 @@ const HeroSection: FC<IHeroSectionProps> = ({}) => {
 					<div style={contentStyle_4} className={styles.slide} />
 				</div>
 			</Carousel>
-		</Section>
+		</section>
 	);
 };
 

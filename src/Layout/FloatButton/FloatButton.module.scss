@@ -9,12 +9,11 @@
 	width: 60%;
 	height: 60%;
 	border-radius: 50%;
-	background-color: #ac9250;
+	background-color: var(--contrast-color-main);
 	border: none;
 	color: var(--font-color-main);
 	font-size: 2.5rem;
-	// font-size: var(--font-size-l);
 }
 .floatButton:hover {
-	background-color: #59471a;
+	background-color: var(--contrast-color-dark);
 }

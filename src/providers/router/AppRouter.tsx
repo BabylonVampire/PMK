@@ -5,10 +5,17 @@ import { MainPage } from '@pages/MainPage';
 import { FC, Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import styles from './AppRouter.module.scss';
+import { LoadingOutlined } from '@ant-design/icons';
 
 const AppRouter: FC = () => {
 	return (
-		<Suspense fallback={<div className={styles.Loader}>Загрузка...</div>}>
+		<Suspense
+			fallback={
+				<div className={styles.Loader}>
+					<LoadingOutlined />
+				</div>
+			}
+		>
 			<Routes>
 				<Route path="/" element={<MainPage />} />
 				<Route path="/about" element={<AboutPage />} />

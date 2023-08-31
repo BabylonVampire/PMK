@@ -1,6 +1,7 @@
 import { FC } from 'react';
 import styles from './AboutSection.module.scss';
 import Section from '@/components/Section/Section';
+import Divider from '@/components/Divider/Divider';
 
 interface IAboutSectionProps {}
 
@@ -17,6 +18,7 @@ const AboutSection: FC<IAboutSectionProps> = ({}) => {
 						<br />
 						Мы - ПМК РАЗВИТИЕ
 					</div>
+					<Divider />
 					<div className={styles.description}>
 						Nissan Wingroad и Nissan AD третьего поколения (код
 						кузова Y12) — компактные универсалы, выпускаемые

@@ -3,6 +3,7 @@ import { FC } from 'react';
 import styles from './BenefitsSection.module.scss';
 import { IBenefit } from '@/types/benefit.interface';
 import { Col, Row } from 'antd';
+import Divider from '@/components/Divider/Divider';
 
 interface IBenefitsSectionProps {
 	benefits: IBenefit[];
@@ -18,7 +19,7 @@ const BenefitsSection: FC<IBenefitsSectionProps> = ({ benefits }) => {
 						Лалалалалалалал ала алалал алалал алал ал алалал
 					</div>
 				</div>
-				<div className={styles.divider}></div>
+				<Divider />
 				<div className={styles.benefitsBox}>
 					<Row>
 						{benefits.map((benefit) => {

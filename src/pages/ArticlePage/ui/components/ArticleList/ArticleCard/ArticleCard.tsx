@@ -12,7 +12,6 @@ const ArticleCard: FC<IArticleCardProps> = ({ article }) => {
 			<div className={styles.fullDate}>
 				<time className={styles.date}>{article.date.date}</time>
 				<time className={styles.month}>{article.date.month}</time>
-				{/* <time className={styles.date}>{article.date.date}</time> */}
 			</div>
 			<h3 className={styles.title}>{article.title}</h3>
 			<img

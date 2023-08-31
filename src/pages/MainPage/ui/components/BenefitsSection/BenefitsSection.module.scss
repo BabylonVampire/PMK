@@ -1,9 +1,12 @@
 .benefitsSection {
+	padding: calc(var(--index) * 2) 0;
+	background-color: var(--dark-color);
 	min-height: 50vh;
 	width: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	margin-bottom: calc(var(--index) * 2);
 }
 .benefitsInnerBox {
 	width: 80%;
@@ -28,13 +31,6 @@
 		flex: 1;
 	}
 }
-.divider {
-	margin: 1rem 0;
-	width: 6rem;
-	height: 0.4rem;
-	background-color: var(--font-color-main);
-}
-
 .benefit {
 	margin: calc(var(--index)) 0;
 	width: 100%;

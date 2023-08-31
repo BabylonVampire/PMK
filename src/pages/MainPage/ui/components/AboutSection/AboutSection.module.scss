@@ -1,12 +1,8 @@
 .aboutSection {
+	padding: calc(var(--index) * 2) 0;
 	height: calc(var(--index) * 25);
 	width: 100%;
-	background-color: var(--main-color);
-	// background: linear-gradient(
-	// 	90deg,
-	// 	rgba(84, 96, 158, 1) 0%,
-	// 	rgba(23, 29, 61, 1) 100%
-	// );
+	background-color: var(--dark-color);
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -42,9 +38,10 @@
 	font-family: var(--heading-family);
 	font-size: var(--font-size-l);
 	color: var(--font-color-main);
+	margin-bottom: calc(var(--index) * 0.5);
 }
 .description {
-	margin-top: calc(var(--index));
+	margin-top: calc(var(--index) * 0.5);
 	font-family: var(--main-family);
 	font-size: var(--font-size-m);
 	color: var(--font-color-dark);
