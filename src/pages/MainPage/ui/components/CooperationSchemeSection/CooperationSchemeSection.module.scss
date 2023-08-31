@@ -5,6 +5,13 @@
 	justify-content: center;
 	align-items: center;
 	background-color: var(--main-color);
+	flex-direction: column;
+}
+.divider {
+	margin: 1rem 0;
+	width: 6rem;
+	height: 0.4rem;
+	background-color: var(--font-color-main);
 }
 .stepsBox {
 	width: 60%;
@@ -28,4 +35,16 @@
 	font-family: var(--main-family);
 	font-size: calc(var(--index) * 1);
 	color: var(--font-color-dark);
+}
+.callUsButton {
+	width: calc(var(--index) * 8);
+	height: calc(var(--index) * 2.5);
+	border-radius: 10px;
+	border: none;
+	background-color: #ac9250;
+	font-family: var(--main-family);
+	font-size: var(--font-size-m);
+	color: var(--font-color-main);
+	cursor: pointer;
+	margin-top: calc(var(--index) * 1.5);
 }

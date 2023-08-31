@@ -1,0 +1,59 @@
+.benefitsSection {
+	min-height: 50vh;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.benefitsInnerBox {
+	width: 90%;
+	height: 90%;
+	display: flex;
+	flex-direction: column;
+}
+.heading {
+	font-family: var(--heading-family);
+	font-size: var(--font-size-l);
+	color: var(--font-color-main);
+}
+.description {
+	font-family: var(--main-family);
+	font-size: var(--font-size-m);
+	color: var(--font-color-dark);
+}
+.headingAndDescription {
+	display: flex;
+	flex-direction: row;
+	& > * {
+		flex: 1;
+	}
+}
+.divider {
+	margin: 1rem 0;
+	width: 6rem;
+	height: 0.4rem;
+	background-color: var(--font-color-main);
+}
+
+.benefit {
+	margin: calc(var(--index)) 0;
+	width: 100%;
+}
+.benefitInnerBox {
+	width: 80%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+.icon {
+	font-size: var(--font-size-l);
+	color: var(--font-color-main);
+}
+
+.text {
+	width: 80%;
+	font-size: var(--font-size-s);
+	color: var(--font-color-dark);
+	font-family: var(--main-family);
+}

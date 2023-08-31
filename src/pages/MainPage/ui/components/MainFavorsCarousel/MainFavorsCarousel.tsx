@@ -27,17 +27,13 @@ const MainFavorsCarousel: FC<IMainFavorsCarouselProps> = ({ cards }) => {
 	}, []);
 
 	useEffect(() => {
-		if (width < 600) {
+		if (width < 900) {
 			setCount(1);
-		} else if (width < 900 && width > 600) {
+		} else if (width < 1400 && width > 900) {
 			setCount(2);
 		} else {
-			// if (width < 1600 && width > 900)
 			setCount(3);
 		}
-		// } else if (width > 1600) {
-		// 	setCount(4);
-		// }
 	}, [width]);
 
 	useEffect(() => {

@@ -10,10 +10,15 @@ const CooperationSchemeSection: FC = () => {
 			className={styles.cooperationSchemeSection}
 			heading="Схема сотрудничества"
 		>
+			<div className={styles.divider}></div>
 			<div className={styles.innerBox}>
-				<div className={styles.divider}></div>
 				<div className={styles.stepsBox}>
 					<Tabs tabContent={cooperationTabs} />
+				</div>
+				<div className={styles.btnBox}>
+					<button className={styles.callUsButton}>
+						Сотрудничать
+					</button>
 				</div>
 			</div>
 		</Section>
