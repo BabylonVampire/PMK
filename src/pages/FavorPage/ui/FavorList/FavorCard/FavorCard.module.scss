@@ -1,4 +1,5 @@
 .FavorCardWrapper {
+	border-radius: 10px;
 	width: 250px;
 	height: 400px;
 	display: flex;
@@ -19,7 +20,7 @@
 }
 .infoBtn {
 	width: 100%;
-	background-color: var(--main-color);
+	background-color: var(--dark-color);
 	border: none;
 	color: var(--font-color-main);
 	font-size: var(--font-size-s);
