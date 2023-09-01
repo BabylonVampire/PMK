@@ -12,6 +12,7 @@ interface IBenefitsSectionProps {
 const BenefitsSection: FC<IBenefitsSectionProps> = ({ benefits }) => {
 	return (
 		<Section className={styles.benefitsSection}>
+			<div className={styles.bgImage} />
 			<div className={styles.benefitsInnerBox}>
 				<div className={styles.headingAndDescription}>
 					<div className={styles.heading}>Наши преимущества</div>
@@ -24,7 +25,7 @@ const BenefitsSection: FC<IBenefitsSectionProps> = ({ benefits }) => {
 					<Row>
 						{benefits.map((benefit) => {
 							return (
-								<Col span={8}>
+								<Col xs={24} sm={12} md={12} lg={8}>
 									<div className={styles.benefit}>
 										<div className={styles.benefitInnerBox}>
 											<div className={styles.icon}>

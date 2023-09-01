@@ -27,9 +27,9 @@ const MainFavorsCarousel: FC<IMainFavorsCarouselProps> = ({ cards }) => {
 	}, []);
 
 	useEffect(() => {
-		if (width < 900) {
+		if (width < 1000) {
 			setCount(1);
-		} else if (width < 1400 && width > 900) {
+		} else if (width < 1400 && width >= 1000) {
 			setCount(2);
 		} else {
 			setCount(3);
@@ -68,7 +68,7 @@ const MainFavorsCarousel: FC<IMainFavorsCarouselProps> = ({ cards }) => {
 	return (
 		<Section className={styles.carouselBox} heading="Наши услуги">
 			<ArrowLeftOutlined onClick={handlePrev} className={styles.button} />
-			<Card card={cards[0]} />
+			<Card card={cards[0]} fixed={true} />
 			<div className={styles.carousel}>
 				<div className={styles.cards} ref={carouselRef}>
 					{cards.map((card) => (

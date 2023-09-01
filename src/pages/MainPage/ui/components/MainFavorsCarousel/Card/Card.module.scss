@@ -1,4 +1,5 @@
-.CardWrapper {
+.CardWrapper,
+.fixedCardWrapper {
 	width: 300px;
 	height: 400px;
 	box-sizing: border-box;
@@ -8,22 +9,27 @@
 	flex-direction: column;
 	align-items: center;
 	color: var(--font-color-main);
-	background-color: var(--main-color);
 	border-radius: 10px;
 	justify-content: space-between;
 }
 .title {
 	display: flex;
 	font-family: var(--heading-family);
-	font-size: var(--font-size-l);
+	font-size: 2rem;
 	color: var(--font-color-main);
 }
 .text {
 	margin-top: calc(var(--index));
 	font-family: var(--main-family);
-	font-size: var(--font-size-m);
+	font-size: 1.3rem;
 	color: var(--font-color-dark);
 }
 .img {
 	width: 100%;
+}
+
+@media (max-width: 750px) {
+	.fixedCardWrapper {
+		display: none;
+	}
 }

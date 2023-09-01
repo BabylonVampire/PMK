@@ -4,12 +4,13 @@ import { ICard } from '@/types';
 
 interface ICardProps {
 	card: ICard;
+	fixed?: boolean;
 }
 
-const Card: FC<ICardProps> = ({ card }) => {
+const Card: FC<ICardProps> = ({ card, fixed }) => {
 	return (
 		<div
-			className={styles.CardWrapper}
+			className={fixed ? styles.fixedCardWrapper : styles.CardWrapper}
 			style={{ background: card.bg }}
 		>
 			<h4 className={styles.title}>{card.title}</h4>

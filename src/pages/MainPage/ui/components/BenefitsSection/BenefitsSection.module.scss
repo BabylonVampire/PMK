@@ -1,4 +1,5 @@
 .benefitsSection {
+	position: relative;
 	padding: calc(var(--index) * 2) 0;
 	background-color: var(--dark-color);
 	min-height: 50vh;
@@ -52,4 +53,35 @@
 	font-size: var(--font-size-s);
 	color: var(--font-color-dark);
 	font-family: var(--main-family);
+}
+.bgImage {
+	opacity: 0.1;
+	position: absolute;
+	height: 55vh;
+	width: 55vh;
+	background-image: url(/src/assets/images/large-icon.png);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+@media (max-width: 800px) {
+	.headingAndDescription {
+		flex-direction: column;
+	}
+	.text {
+		font-size: var(--font-size-m);
+	}
+	.bgImage {
+		height: calc(var(--index) * 25);
+		width: calc(var(--index) * 25);
+	}
+}
+
+@media (max-width: 550px) {
+	.text,
+	.description,
+	.heading {
+		font-size: var(--font-size-l);
+	}
 }

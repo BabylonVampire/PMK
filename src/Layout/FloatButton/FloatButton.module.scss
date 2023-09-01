@@ -2,18 +2,31 @@
 	width: 8em;
 	height: 8em;
 	position: fixed;
-	bottom: calc(var(--index) * 1);
-	right: calc(var(--index) * 1);
+	bottom: 0;
+	right: 0;
 }
 .floatButton {
-	width: 60%;
-	height: 60%;
+	display: flex;
+	width: 55%;
+	height: 55%;
 	border-radius: 50%;
 	background-color: var(--contrast-color-main);
 	border: none;
 	color: var(--font-color-main);
 	font-size: 2.5rem;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }
 .floatButton:hover {
 	background-color: var(--contrast-color-dark);
+}
+@media (max-width: 700px) {
+	.floatButtonContainer {
+		width: 6em;
+		height: 6em;
+	}
+	.floatButton {
+		font-size: 2.2rem;
+	}
 }

@@ -18,7 +18,7 @@
 	display: flex;
 	padding: calc(var(--index));
 	font-family: var(--main-family);
-	font-size: calc(var(--index) * 1);
+	font-size: var(--font-size-m);
 	cursor: pointer;
 	flex-direction: column;
 	align-items: center;
@@ -36,9 +36,19 @@
 .tabText {
 	margin: calc(var(--index));
 	font-family: var(--main-family);
-	font-size: calc(var(--index) * 1);
+	font-size: var(--font-size-m);
 	color: var(--font-color-dark);
 }
 .heading {
 	margin-top: calc(var(--index) * 0.5);
+}
+
+@media (max-width: 700px) {
+	.tab,
+	.selectedTab {
+		font-size: var(--font-size-l);
+	}
+	.tabText {
+		font-size: var(--font-size-l);
+	}
 }
