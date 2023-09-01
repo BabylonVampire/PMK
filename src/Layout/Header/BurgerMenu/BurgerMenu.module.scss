@@ -1,3 +1,21 @@
 .BurgerMenuWrapper {
 	display: flex;
+	flex-direction: column;
+	& > * {
+		font-size: var(--font-size-l);
+		font-family: var(--main-family);
+		color: var(--font-color-main);
+	}
+}
+
+.burgerMenu {
+	margin: 0 calc(var(--index) * 2);
+	display: flex;
+	color: var(--font-color-main);
+	font-size: var(--font-size-l);
+}
+
+.burgerMenuBody {
+	background-color: var(--main-color) !important;
+	color: var(--font-color-main);
 }

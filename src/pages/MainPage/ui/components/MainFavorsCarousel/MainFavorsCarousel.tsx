@@ -29,7 +29,7 @@ const MainFavorsCarousel: FC<IMainFavorsCarouselProps> = ({ cards }) => {
 	useEffect(() => {
 		if (width < 1000) {
 			setCount(1);
-		} else if (width < 1400 && width >= 1000) {
+		} else if (width < 1400) {
 			setCount(2);
 		} else {
 			setCount(3);
@@ -38,7 +38,8 @@ const MainFavorsCarousel: FC<IMainFavorsCarouselProps> = ({ cards }) => {
 
 	useEffect(() => {
 		if (carouselRef.current) {
-			carouselRef.current.style.transition = 'transform 0.5s ease-in-out';
+			carouselRef.current.style.transition =
+				'transform 0.25s ease-in-out';
 			carouselRef.current.style.transform = `translateX(${
 				(cards.length / 2 +
 					(count % 2 === 0 ? 0 : 0.5) -

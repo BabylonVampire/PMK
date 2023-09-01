@@ -12,16 +12,14 @@ const Header: FC<IHeaderProps> = memo(() => {
 	const nav = useNavigate();
 	const [width, setWidth] = useState(window.innerWidth);
 	const [burger, setBurger] = useState<boolean>(false);
-	
+
 	useEffect(() => {
-		if (width < 768) {
+		if (width <= 1000) {
 			setBurger(true);
-		}
-		else {
+		} else {
 			setBurger(false);
 		}
 	}, [width]);
-
 
 	useEffect(() => {
 		const handleResize = () => {
@@ -43,6 +41,9 @@ const Header: FC<IHeaderProps> = memo(() => {
 					{headerLinks.map((el) => {
 						return <NavButton link={el.link}>{el.text}</NavButton>;
 					})}
+					{/* <div className={styles.logoBox}> */}
+					{/* <Logo hover onClick={() => nav('/')} /> */}
+					{/* </div> */}
 				</nav>
 			)}
 		</header>

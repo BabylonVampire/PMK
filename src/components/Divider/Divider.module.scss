@@ -4,3 +4,8 @@
 	height: 0.4rem;
 	background-color: var(--font-color-main);
 }
+@media (max-width: 1000px) {
+	.divider {
+		height: 0.2rem;
+	}
+}
