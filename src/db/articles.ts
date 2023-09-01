@@ -10,7 +10,7 @@ export const articles: IArticle[] = [
 			year: '2023',
 		},
 		preview:
-			'https://i.pinimg.com/originals/2e/cf/05/2ecf05990f47ae5aa8ca05444f10c3c5.jpg',
+			'https://media2.cackle.me/f/e2/753708a07fe7b17aa96679233808ce2f.jpg',
 		content: [
 			{
 				type: 'heading',
@@ -67,7 +67,7 @@ export const articles: IArticle[] = [
 			year: '2023',
 		},
 		preview:
-			'https://i.pinimg.com/originals/2e/cf/05/2ecf05990f47ae5aa8ca05444f10c3c5.jpg',
+			'https://media2.cackle.me/f/e2/753708a07fe7b17aa96679233808ce2f.jpg',
 		content: [
 			{
 				type: 'heading',

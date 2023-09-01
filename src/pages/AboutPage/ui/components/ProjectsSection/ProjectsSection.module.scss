@@ -1,0 +1,32 @@
+.ProjectsSectionWrapper {
+	background-color: var(--dark-color);
+}
+.ProjectsSectionContainer {
+	max-width: 1600px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.title {
+	font-size: var(--font-size-l);
+	color: var(--font-color-main);
+	font-family: var(--heading-family);
+}
+.content {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.descriptionContainer {
+	display: flex;
+	flex-direction: column;
+}
+.description {
+	font-size: var(--font-size-m);
+	color: var(--font-color-main);
+	font-family: var(--main-family);
+}
+.preview {
+	width: 20%;
+}
