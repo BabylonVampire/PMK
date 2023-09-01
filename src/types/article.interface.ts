@@ -9,8 +9,8 @@ export type IArticleContent =
 	| {
 			type: 'text' | 'image' | 'heading';
 			value: string;
-	  }
+		}
 	| {
 			type: 'list';
 			value: string[];
-	  };
+		};

@@ -1,0 +1,18 @@
+.CertificateSectionWrapper {
+	background-color: var(--dark-color);
+}
+.CertificatesContainer {
+	max-width: 1600px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: row;
+	gap: 20px;
+	justify-content: center;
+	padding: 20px 0;
+}
+@media (max-width: 768px) {
+	.CertificatesContainer {
+		flex-direction: column;
+		align-items: center;
+	}
+}
