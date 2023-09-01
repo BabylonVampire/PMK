@@ -3,31 +3,20 @@ import styles from './ProjectsSection.module.scss';
 import Section from '@/components/Section/Section';
 import { projects } from '@/db';
 import { IArticle } from '@/types';
+import Divider from '@/components/Divider/Divider';
+import CallUsButton from '@/components/CallUsButton/CallUsButton';
 
 interface IProjectsSectionProps {}
 
 const ProjectsSection: FC<IProjectsSectionProps> = () => {
-	const [project, setProject] = useState<IArticle>();
-
-	const getOneProject = (projects: IArticle[]): void => {
-		setProject(projects[Math.floor(Math.random() * projects.length)]);
-	};
-
-	useEffect(() => {
-		getOneProject(projects);
-	}, []);
-
 	return (
-		<Section
-			heading="Наши проекты"
-			sectionClassName={styles.ProjectsSectionWrapper}
-		>
-			{project && (
-				<div className={styles.ProjectsSectionContainer}>
-					<h3 className={styles.title}>{project.title}</h3>
-					<div className={styles.content}>
-						<div className={styles.descriptionContainer}>
-						{project.content
+		<Section sectionClassName={styles.ProjectsSectionWrapper}>
+			<div className={styles.ProjectsSectionContainer}>
+				<h3 className={styles.title}>{projects.title}</h3>
+				<Divider />
+				<div className={styles.content}>
+					<div className={styles.descriptionContainer}>
+						{projects.content
 							.filter((el) => el.type === 'text')
 							.map((el) => {
 								return (
@@ -36,11 +25,17 @@ const ProjectsSection: FC<IProjectsSectionProps> = () => {
 									</p>
 								);
 							})}
+						<div className={styles.btnBox}>
+							<CallUsButton />
 						</div>
-						<img className={styles.preview} src={project.preview} alt={project.title} />
 					</div>
+					<img
+						className={styles.preview}
+						src={projects.preview}
+						alt={projects.title}
+					/>
 				</div>
-			)}
+			</div>
 		</Section>
 	);
 };

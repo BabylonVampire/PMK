@@ -3,7 +3,6 @@ import styles from './FavorPage.module.scss';
 import FavorList from './FavorList/FavorList';
 import { favors } from '@/db';
 import AboutFavorsSection from './AboutFavorsSection/AboutFavorsSection';
-import FlipCard from './ServicePoints/ServicePoints';
 
 interface IFavorPageProps {}
 

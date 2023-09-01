@@ -7,11 +7,13 @@ interface IAdvantageProps {
 }
 
 const Advantage: FC<IAdvantageProps> = ({ advantage }) => {
-	return <div className={styles.AdvantageWrapper}>
-		<img className={styles.img} src={advantage.img} alt={advantage.title} />
-		<h3 className={styles.title}>{advantage.title}</h3>
-		<p className={styles.description}>{advantage.description}</p>
-	</div>;
+	return (
+		<div className={styles.AdvantageWrapper}>
+			<div className={styles.icon}>{advantage.img}</div>
+			<h3 className={styles.title}>{advantage.title}</h3>
+			<p className={styles.description}>{advantage.description}</p>
+		</div>
+	);
 };
 
 export default Advantage;

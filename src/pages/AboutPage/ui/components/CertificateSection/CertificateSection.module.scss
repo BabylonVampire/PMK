@@ -1,14 +1,29 @@
 .CertificateSectionWrapper {
+	height: 70vh;
 	background-color: var(--dark-color);
+	margin-top: calc(var(--index));
+	padding-top: calc(var(--index) * 2);
 }
 .CertificatesContainer {
+	height: 60%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.imageWrapper {
+	border-radius: 10px;
+	overflow: hidden;
+}
+.images {
+	height: 100%;
 	max-width: 1600px;
 	margin: 0 auto;
 	display: flex;
 	flex-direction: row;
 	gap: 20px;
 	justify-content: center;
-	padding: 20px 0;
+	align-items: center;
 }
 @media (max-width: 768px) {
 	.CertificatesContainer {
