@@ -2,10 +2,12 @@
 	background-color: var(--dark-color);
 }
 .ProjectsSectionContainer {
+	min-height: 50vh;
 	max-width: 1600px;
 	margin: 0 auto;
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
 	align-items: center;
 }
 .title {
@@ -14,6 +16,8 @@
 	font-family: var(--heading-family);
 }
 .content {
+	width: 80%;
+	height: 100%;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
@@ -21,12 +25,17 @@
 .descriptionContainer {
 	display: flex;
 	flex-direction: column;
+	width: 100%;
 }
 .description {
 	font-size: var(--font-size-m);
 	color: var(--font-color-main);
 	font-family: var(--main-family);
+	margin: calc(var(--index)) 0;
 }
 .preview {
 	width: 20%;
+}
+.btnBox {
+	margin: 0 auto;
 }
