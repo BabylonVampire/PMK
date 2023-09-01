@@ -4,6 +4,7 @@ import Tabs from './Tabs/Tabs';
 import { cooperationTabs } from '@/db';
 import Section from '@/components/Section/Section';
 import Divider from '@/components/Divider/Divider';
+import CallUsButton from '@/components/CallUsButton/CallUsButton';
 
 const CooperationSchemeSection: FC = () => {
 	return (
@@ -17,9 +18,7 @@ const CooperationSchemeSection: FC = () => {
 					<Tabs tabContent={cooperationTabs} />
 				</div>
 				<div className={styles.btnBox}>
-					<button className={styles.callUsButton}>
-						Сотрудничать
-					</button>
+					<CallUsButton />
 				</div>
 			</div>
 		</Section>
