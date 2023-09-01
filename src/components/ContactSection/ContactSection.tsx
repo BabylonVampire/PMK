@@ -3,7 +3,8 @@ import styles from './ContactSection.module.scss';
 import Section from '../Section/Section';
 import { Button, Form, Input } from 'antd';
 import TextArea from 'antd/es/input/TextArea';
-import { Message, SMTPClient } from 'emailjs'; 
+import { Message, SMTPClient } from 'emailjs';
+import emailjs from '@emailjs/browser';
 
 interface IContactSectionProps {
 	page: 'contacts' | 'partners' | 'about';
@@ -16,7 +17,7 @@ const ContactSection: FC<IContactSectionProps> = ({ page }) => {
 		host: 'smtp.your-email.com',
 		ssl: true,
 	});
-	
+
 	const onFinish = (values: Message) => {
 		console.log('Success:', values);
 		client.send(values, () => {
@@ -56,7 +57,11 @@ const ContactSection: FC<IContactSectionProps> = ({ page }) => {
 						},
 						() => ({
 							validator(_, value: string) {
-								if (/^\+?(\d[\d\-\\+\\(\\) ]{5,}\d$)/.test(value)) {
+								if (
+									/^\+?(\d[\d\-\\+\\(\\) ]{5,}\d$)/.test(
+										value
+									)
+								) {
 									return Promise.resolve();
 								}
 								return Promise.reject(
@@ -68,7 +73,7 @@ const ContactSection: FC<IContactSectionProps> = ({ page }) => {
 						}),
 					]}
 				>
-					<Input/>
+					<Input />
 				</Form.Item>
 				<Form.Item
 					label="Комментарий"
