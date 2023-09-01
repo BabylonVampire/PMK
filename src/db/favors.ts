@@ -1,4 +1,4 @@
-import { IFavor } from "@/types";
+import { IFavor } from '@/types';
 
 export const favors: IFavor[] = [
 	{
@@ -9,16 +9,76 @@ export const favors: IFavor[] = [
 		description: [
 			{
 				id: 1,
-				text: 'Легко и удобно'
+				text: 'Легко и удобно',
 			},
 			{
 				id: 2,
-				text: 'Дёшево'
+				text: 'Дёшево',
 			},
 			{
 				id: 3,
-				text: 'Быстро'
-			}
-		]
-	}
-]
+				text: 'Быстро',
+			},
+		],
+	},
+	{
+		id: 1,
+		name: 'Набить ебало',
+		price: '100р',
+		time: '5 минут',
+		description: [
+			{
+				id: 1,
+				text: 'Легко и удобно',
+			},
+			{
+				id: 2,
+				text: 'Дёшево',
+			},
+			{
+				id: 3,
+				text: 'Быстро',
+			},
+		],
+	},
+	{
+		id: 1,
+		name: 'Набить ебало',
+		price: '100р',
+		time: '5 минут',
+		description: [
+			{
+				id: 1,
+				text: 'Легко и удобно',
+			},
+			{
+				id: 2,
+				text: 'Дёшево',
+			},
+			{
+				id: 3,
+				text: 'Быстро',
+			},
+		],
+	},
+	{
+		id: 1,
+		name: 'Набить ебало',
+		price: '100р',
+		time: '5 минут',
+		description: [
+			{
+				id: 1,
+				text: 'Легко и удобно',
+			},
+			{
+				id: 2,
+				text: 'Дёшево',
+			},
+			{
+				id: 3,
+				text: 'Быстро',
+			},
+		],
+	},
+];

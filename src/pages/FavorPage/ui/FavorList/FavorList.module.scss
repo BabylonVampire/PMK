@@ -1,8 +1,25 @@
 .FavorListWrapper {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	min-height: 50vh;
+}
+.FavorListContainer {
+	width: 80%;
 }
 .FavorList {
+	gap: calc(var(--index));
+	display: flex;
 	width: 90%;
 	max-width: 1600px;
 	padding: 20px;
 	margin: 0 auto;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+.column {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
