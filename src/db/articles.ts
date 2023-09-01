@@ -10,7 +10,7 @@ export const articles: IArticle[] = [
 			year: '2023',
 		},
 		preview:
-			'https://media2.cackle.me/f/e2/753708a07fe7b17aa96679233808ce2f.jpg',
+			'src/assets/images/articles/article_1.jpg',
 		content: [
 			{
 				type: 'heading',
@@ -38,7 +38,8 @@ export const articles: IArticle[] = [
 			month: 'Августа',
 			year: '2023',
 		},
-		preview: '',
+		preview:
+			'src/assets/images/articles/article_2.jpg',
 		content: [
 			{
 				type: 'heading',
@@ -67,7 +68,7 @@ export const articles: IArticle[] = [
 			year: '2023',
 		},
 		preview:
-			'https://media2.cackle.me/f/e2/753708a07fe7b17aa96679233808ce2f.jpg',
+			'src/assets/images/articles/article_3.jpg',
 		content: [
 			{
 				type: 'heading',
