@@ -1,8 +1,23 @@
 .AdvantageWrapper {
-	background-color: var(--light-color);
+	display: flex;
 	box-sizing: border-box;
 	padding: 20px;
-}
-.img {
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
 	width: 100%;
+}
+.icon {
+	color: var(--font-color-main);
+	font-size: calc(var(--index) * 5);
+}
+.title {
+	font-size: var(--font-size-l);
+	color: var(--font-color-main);
+	font-family: var(--main-family);
+}
+.description {
+	font-size: var(--font-size-m);
+	font-family: var(--main-family);
+	color: var(--font-color-dark);
 }

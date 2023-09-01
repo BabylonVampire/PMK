@@ -15,7 +15,16 @@ const AdvantagesSection: FC<IAdvantagesSectionProps> = () => {
 			<div className={styles.AdvantagesContainer}>
 				{advantages.map((advantage) => {
 					return (
-						<Advantage key={advantage.id} advantage={advantage} />
+						<>
+							<Advantage
+								key={advantage.id}
+								advantage={advantage}
+							/>
+							{advantages.indexOf(advantage) ===
+							advantages.length - 1 ? null : (
+								<div className={styles.verticalDivider} />
+							)}
+						</>
 					);
 				})}
 			</div>
