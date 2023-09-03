@@ -3,13 +3,14 @@
 	height: calc(var(--index) * 2.5);
 	border-radius: 10px;
 	border: none;
-	background-color: var(--contrast-color-main);
+	background-color: var(--contrast-color-dark);
 	font-family: var(--main-family);
 	font-size: var(--font-size-m);
 	color: var(--font-color-main);
 	cursor: pointer;
 	margin-top: calc(var(--index) * 1.5);
+	transition: 0.3s;
 }
 .callUsButton:hover {
-	background-color: var(--contrast-color-dark);
+	background-color: var(--contrast-color-main);
 }

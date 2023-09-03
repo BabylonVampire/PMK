@@ -35,7 +35,7 @@ export const cards: ICard[] = [
 		title: 'Кчау6',
 		text: 'Чекни мать',
 		img: 'src/assets/images/cards/card_1.jpg',
-		bg: 'radial-gradient(circle, rgba(23,29,61,1) 0%, rgba(84,96,158,1) 76%)',
+		bg: 'background-image: linear-gradient(135deg, var(--dark-color), var(--light-color))',
 	},
 	{
 		title: 'Кчау7',
