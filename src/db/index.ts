@@ -9,4 +9,5 @@ export * from './headerLinks';
 export * from './benefits';
 export * from './advantages';
 export * from './certificates';
-export * from './projects';
+export * from './project';
+export * from './favorCards';

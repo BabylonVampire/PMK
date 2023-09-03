@@ -1,6 +1,6 @@
 import { IArticle } from '@/types';
 
-export const projects: IArticle = {
+export const project: IArticle = {
 	id: 1,
 	title: 'Каловая ванна',
 	date: {

@@ -1,12 +1,18 @@
 import { FC } from 'react';
 import styles from './CooperationSchemeSection.module.scss';
 import Tabs from './Tabs/Tabs';
-import { cooperationTabs } from '@/db';
 import Section from '@/components/Section/Section';
 import Divider from '@/components/Divider/Divider';
 import CallUsButton from '@/components/CallUsButton/CallUsButton';
+import { ICooperationTab } from '@/types';
 
-const CooperationSchemeSection: FC = () => {
+interface ICooperationSchemeSection {
+	cooperationTabs: ICooperationTab[];
+}
+
+const CooperationSchemeSection: FC<ICooperationSchemeSection> = ({
+	cooperationTabs,
+}) => {
 	return (
 		<Section
 			className={styles.cooperationSchemeSection}

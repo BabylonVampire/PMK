@@ -4,7 +4,7 @@ import HeroSection from './components/HeroSection/HeroSection';
 import AboutSection from './components/AboutSection/AboutSection';
 import CooperationSchemeSection from './components/CooperationSchemeSection/CooperationSchemeSection';
 import MainFavorsCarousel from './components/MainFavorsCarousel/MainFavorsCarousel';
-import { cards, benefits } from '@/db';
+import { cards, benefits, cooperationTabs } from '@/db';
 import BenefitsSection from './components/BenefitsSection/BenefitsSection';
 
 interface IMainPageProps {}
@@ -16,7 +16,7 @@ const MainPage: FC<IMainPageProps> = () => {
 			<AboutSection />
 			<MainFavorsCarousel cards={cards} />
 			<BenefitsSection benefits={benefits} />
-			<CooperationSchemeSection />
+			<CooperationSchemeSection cooperationTabs={cooperationTabs} />
 		</main>
 	);
 };

@@ -3,11 +3,13 @@ import Card from './Card/Card';
 import styles from './FavorCards.module.scss';
 import Section from '@/components/Section/Section';
 import { Row } from 'antd';
-import { favorCards } from '@/db/favorCards';
+import { IFavorCard } from '@/types';
 
-interface IFavorCardsProps {}
+interface IFavorCardsProps {
+	favorCards: IFavorCard[];
+}
 
-const FavorCards: FC<IFavorCardsProps> = ({}) => {
+const FavorCards: FC<IFavorCardsProps> = ({ favorCards }) => {
 	return (
 		<Section className={styles.FavorCardsSection}>
 			<div className={styles.innerContainer}>

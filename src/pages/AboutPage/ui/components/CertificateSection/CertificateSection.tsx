@@ -1,13 +1,15 @@
 import { FC } from 'react';
+import { Image } from 'antd';
 import styles from './CertificateSection.module.scss';
 import Section from '@/components/Section/Section';
-import { certificates } from '@/db';
-import { Image } from 'antd';
 import Divider from '@/components/Divider/Divider';
+import { ICertificate } from '@/types';
 
-interface ICertificateSectionProps {}
+interface ICertificateSectionProps {
+	certificates: ICertificate[];
+}
 
-const CertificateSection: FC<ICertificateSectionProps> = () => {
+const CertificateSection: FC<ICertificateSectionProps> = ({ certificates }) => {
 	return (
 		<Section
 			heading="Наши сертификаты"

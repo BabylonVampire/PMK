@@ -1,7 +1,6 @@
 import { FC } from 'react';
 import styles from './HeroSection.module.scss';
 import { Carousel } from 'antd';
-import Section from '@/components/Section/Section';
 
 interface IHeroSectionProps {}
 

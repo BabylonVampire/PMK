@@ -1,12 +1,14 @@
 import { FC } from 'react';
 import styles from './AdvantagesSection.module.scss';
 import Section from '@/components/Section/Section';
-import { advantages } from '@/db';
 import Advantage from './Advantage/Advantage';
+import { IAdvantage } from '@/types';
 
-interface IAdvantagesSectionProps {}
+interface IAdvantagesSectionProps {
+	advantages: IAdvantage[];
+}
 
-const AdvantagesSection: FC<IAdvantagesSectionProps> = () => {
+const AdvantagesSection: FC<IAdvantagesSectionProps> = ({ advantages }) => {
 	return (
 		<Section
 			heading="Зачем выбирать нас?"

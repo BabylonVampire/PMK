@@ -2,6 +2,7 @@ import { FC } from 'react';
 import styles from './FavorPage.module.scss';
 import FavorList from './FavorList/FavorList';
 import { favors } from '@/db';
+import { favorCards } from '@/db';
 import AboutFavorsSection from './AboutFavorsSection/AboutFavorsSection';
 import FavorCards from './FavorCards/FavorCards';
 import ProgressBarSection from './ProgressBarSection/ProgressBarSection';
@@ -15,7 +16,7 @@ const FavorPage: FC<IFavorPageProps> = () => {
 				text="asdasdasdasdasdasda asda sdas das dasda sdasdadaa asd asd as as asdadadasd ashjg asj hajsgdjhasgdjahsd hgdjas jahgsd jjhasdgaj ajhdgasjhdgasj ajshdgajhd ajshdgajhgdja jahgdj had asdgasd gasjhasa ahsjgaj asg"
 				list={['asd', 'asdasd', 'asdad']}
 			/>
-			<FavorCards />
+			<FavorCards favorCards={favorCards} />
 			<ProgressBarSection />
 			<FavorList favors={favors} />
 		</main>

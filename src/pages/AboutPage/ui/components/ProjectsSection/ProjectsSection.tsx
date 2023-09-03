@@ -1,22 +1,23 @@
-import { FC, useEffect, useState } from 'react';
+import { FC } from 'react';
 import styles from './ProjectsSection.module.scss';
 import Section from '@/components/Section/Section';
-import { projects } from '@/db';
-import { IArticle } from '@/types';
 import Divider from '@/components/Divider/Divider';
 import CallUsButton from '@/components/CallUsButton/CallUsButton';
+import { IArticle } from '@/types';
 
-interface IProjectsSectionProps {}
+interface IProjectsSectionProps {
+	project: IArticle;
+}
 
-const ProjectsSection: FC<IProjectsSectionProps> = () => {
+const ProjectsSection: FC<IProjectsSectionProps> = ({ project }) => {
 	return (
 		<Section sectionClassName={styles.ProjectsSectionWrapper}>
 			<div className={styles.ProjectsSectionContainer}>
-				<h3 className={styles.title}>{projects.title}</h3>
+				<h3 className={styles.title}>{project.title}</h3>
 				<Divider />
 				<div className={styles.content}>
 					<div className={styles.descriptionContainer}>
-						{projects.content
+						{project.content
 							.filter((el) => el.type === 'text')
 							.map((el) => {
 								return (
@@ -31,8 +32,8 @@ const ProjectsSection: FC<IProjectsSectionProps> = () => {
 					</div>
 					<img
 						className={styles.preview}
-						src={projects.preview}
-						alt={projects.title}
+						src={project.preview}
+						alt={project.title}
 					/>
 				</div>
 			</div>

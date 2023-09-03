@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import './Card.scss';
 import { Col } from 'antd';
-import { IFavorCard } from '@/types/favorCard';
+import { IFavorCard } from '@/types/favorCard.interface';
 
 interface ICardProps {
 	favorCard: IFavorCard;

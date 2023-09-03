@@ -4,16 +4,17 @@ import CertificateSection from './components/CertificateSection/CertificateSecti
 import AdvantagesSection from './components/AdvantagesSection/AdvantagesSection';
 import ProjectsSection from './components/ProjectsSection/ProjectsSection';
 import ContactSection from '@/components/ContactSection/ContactSection';
+import { advantages, project, certificates } from '@/db';
 
 interface IAboutPageProps {}
 
 const AboutPage: FC<IAboutPageProps> = () => {
 	return (
 		<main className={styles.aboutPage}>
-			<ProjectsSection/>
-			<AdvantagesSection/>
-			<CertificateSection/>
-			<ContactSection page='about'/>
+			<ProjectsSection project={project} />
+			<AdvantagesSection advantages={advantages} />
+			<CertificateSection certificates={certificates} />
+			<ContactSection page="about" />
 		</main>
 	);
 };
