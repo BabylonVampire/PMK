@@ -9,3 +9,4 @@ export * from './headerLink.interface';
 export * from './certificate.interface';
 export * from './advantage.interface';
 export * from './favorCard.interface';
+export * from './contactItem.interface';

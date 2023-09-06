@@ -35,7 +35,7 @@ const contentStyle_4: React.CSSProperties = {
 
 const HeroSection: FC<IHeroSectionProps> = ({}) => {
 	return (
-		<section className={styles.heroSection}>
+		<section className={`${styles.heroSection} heroSection`}>
 			<Carousel autoplay>
 				<div>
 					<div style={contentStyle_1} className={styles.slide} />

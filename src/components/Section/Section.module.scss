@@ -2,11 +2,13 @@
 	font-size: calc(var(--index) * 2);
 	font-family: var(--heading-family);
 	color: var(--font-color-main);
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
 	padding: 15px 0;
 }
 .Section {
+}
+.headingBox {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }

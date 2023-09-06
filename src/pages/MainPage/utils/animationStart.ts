@@ -8,14 +8,31 @@ const animationStart = () => {
 	let memberCards = gsap.utils.toArray<HTMLElement>('.memberCard');
 
 	gsap.fromTo(
-		'#backGround',
-		{ backgroundColor: '#171d3d' }, //var(--main-color)
+		'.aboutSectionPic',
+		{ x: '-3em', y: '-3em', opacity: 0 },
 		{
-			backgroundColor: '#070d28', //var(--dark-color)
+			x: 0,
+			y: 0,
+			opacity: 1,
 			duration: 1,
 			scrollTrigger: {
-				start: 'top',
-				trigger: '#serviceBlocks',
+				start: 'center',
+				trigger: '.heroSection',
+				toggleActions: 'play none none reverse',
+			},
+		}
+	);
+
+	gsap.fromTo(
+		'.carouselBox',
+		{ y: '3em', opacity: 0 },
+		{
+			y: 0,
+			opacity: 1,
+			duration: 1,
+			scrollTrigger: {
+				start: 'center',
+				trigger: '.aboutSection',
 				toggleActions: 'play none none reverse',
 			},
 		}

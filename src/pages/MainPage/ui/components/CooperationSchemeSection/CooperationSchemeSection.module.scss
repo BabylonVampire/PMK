@@ -1,10 +1,10 @@
 .cooperationSchemeSection {
-	height: 50vh;
+	min-height: 50vh;
 	width: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-color: var(--main-color);
+	// background-color: var(--main-color);
 	flex-direction: column;
 }
 .stepsBox {
@@ -34,5 +34,10 @@
 @media (max-width: 700px) {
 	.stepsBox {
 		width: 90%;
+	}
+}
+@media (max-width: 800px) {
+	.cooperationSchemeSection {
+		min-height: 30vh;
 	}
 }

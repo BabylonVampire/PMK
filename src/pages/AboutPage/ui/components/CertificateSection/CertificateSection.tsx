@@ -17,6 +17,7 @@ const CertificateSection: FC<ICertificateSectionProps> = ({ certificates }) => {
 			className={styles.CertificatesContainer}
 		>
 			<Divider />
+			<div className={styles.description}>Лалала</div>
 			<div className={styles.images}>
 				{certificates.map((certificate) => {
 					return (

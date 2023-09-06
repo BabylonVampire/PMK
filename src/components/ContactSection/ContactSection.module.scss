@@ -1,0 +1,51 @@
+.contactsSection {
+	width: 100%;
+}
+
+.ContactSectionWrapper {
+	// background-color: var(--main-color);
+	min-height: 67vh;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.innerBox {
+	width: 80%;
+	height: 90%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.inputForm {
+	width: 60%;
+}
+.inputLabel {
+	margin-top: calc(var(--index));
+	margin-bottom: calc(var(--index) * 0.5);
+	color: var(--font-color-main);
+	font-size: var(--font-size-s);
+	font-family: var(--main-family);
+}
+.sendButton {
+	margin: 0 auto;
+	display: flex;
+	width: calc(var(--index) * 8);
+	height: calc(var(--index) * 2.5);
+	border-radius: 10px;
+	border: none;
+	background-color: var(--contrast-color-dark);
+	font-family: var(--main-family);
+	font-size: var(--font-size-m);
+	color: var(--font-color-main);
+	cursor: pointer;
+	margin-top: calc(var(--index) * 1.5);
+	transition: 0.3s;
+	align-items: center;
+	justify-content: center;
+}
+.sendButton:hover {
+	background-color: var(--contrast-color-main);
+}

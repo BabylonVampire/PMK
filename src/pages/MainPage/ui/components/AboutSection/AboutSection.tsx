@@ -7,9 +7,9 @@ interface IAboutSectionProps {}
 
 const AboutSection: FC<IAboutSectionProps> = ({}) => {
 	return (
-		<Section className={styles.aboutSection}>
+		<Section className={`${styles.aboutSection} aboutSection`}>
 			<div className={styles.innerContainer}>
-				<div className={styles.pictureBox}>
+				<div className={`${styles.pictureBox} aboutSectionPic`}>
 					<div className={styles.picture}></div>
 				</div>
 				<div className={styles.textBox}>

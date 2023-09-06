@@ -7,6 +7,7 @@
 	align-items: center;
 	justify-content: center;
 	margin-bottom: calc(var(--index) * 2);
+	filter: drop-shadow(2px 4px 6px #000);
 }
 .innerContainer {
 	height: 90%;

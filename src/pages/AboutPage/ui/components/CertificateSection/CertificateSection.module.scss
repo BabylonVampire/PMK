@@ -5,7 +5,7 @@
 	padding-top: calc(var(--index) * 2);
 }
 .CertificatesContainer {
-	height: 60%;
+	height: 70%;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -24,6 +24,11 @@
 	gap: 20px;
 	justify-content: center;
 	align-items: center;
+}
+.description {
+	font-size: var(--font-size-m);
+	color: var(--font-color-dark);
+	font-family: var(--main-family);
 }
 @media (max-width: 768px) {
 	.CertificatesContainer {

@@ -1,97 +1,88 @@
-import { FC } from 'react';
+import { FC, useState } from 'react';
 import styles from './ContactSection.module.scss';
 import Section from '../Section/Section';
-import { Button, Form, Input } from 'antd';
-import TextArea from 'antd/es/input/TextArea';
-import { Message, SMTPClient } from 'emailjs';
+import { Input } from 'antd';
 import emailjs from '@emailjs/browser';
 
 interface IContactSectionProps {
 	page: 'contacts' | 'partners' | 'about';
 }
 
-const ContactSection: FC<IContactSectionProps> = ({ page }) => {
-	const client = new SMTPClient({
-		user: 'user',
-		password: 'password',
-		host: 'smtp.your-email.com',
-		ssl: true,
-	});
+const checkPhone = (phone: string) => {
+	return /^\+?(\d[\d\-\\+\\(\\) ]{5,}\d$)/.test(phone);
+};
 
-	const onFinish = (values: Message) => {
-		console.log('Success:', values);
-		client.send(values, () => {
-			console.log('sent');
-		});
+const { TextArea } = Input;
+
+const ContactSection: FC<IContactSectionProps> = ({ page }) => {
+	const [name, setName] = useState<string>('');
+	const [email, setEmail] = useState<string>('');
+	const [phone, setPhone] = useState<string>('');
+	const [message, setMessage] = useState<string>('');
+
+	const YOUR_SERVICE_ID = 'service_q70p2vb';
+	const YOUR_TEMPLATE_ID = 'template_38qccbo';
+	const YOUR_PUBLIC_KEY = 'Uj0KTkPXkDekWxNX1';
+	const PARAMS = {
+		user: `${name}`,
+		phone: `${phone}`,
+		message: `${message}`,
+		email: `${email}`,
+	};
+
+	const sendEmail = () => {
+		if (!name || !phone || !email) {
+			return;
+		}
+
+		if (!checkPhone(phone)) {
+			return;
+		}
+		// if (!checkEmail(email)) {
+
+		// 	return;
+		// }
+		else {
+			emailjs.send(
+				YOUR_SERVICE_ID,
+				YOUR_TEMPLATE_ID,
+				PARAMS,
+				YOUR_PUBLIC_KEY
+			);
+		}
 	};
 
 	return (
-		<Section className={styles.ContactSectionWrapper}>
-			<Form
-				name="feedback"
-				labelCol={{ span: 8 }}
-				wrapperCol={{ span: 16 }}
-				style={{ maxWidth: 600 }}
-				autoComplete="off"
-				onFinish={onFinish}
-			>
-				<Form.Item
-					label="Имя"
-					name="name"
-					rules={[
-						{
-							required: true,
-							message: 'Пожалуйста, введите ваше имя!',
-						},
-					]}
-				>
-					<Input />
-				</Form.Item>
-				<Form.Item
-					label="Телефон"
-					name="phone"
-					rules={[
-						{
-							required: true,
-							message: 'Пожалуйста, введите ваш номер телефона!',
-						},
-						() => ({
-							validator(_, value: string) {
-								if (
-									/^\+?(\d[\d\-\\+\\(\\) ]{5,}\d$)/.test(
-										value
-									)
-								) {
-									return Promise.resolve();
-								}
-								return Promise.reject(
-									new Error(
-										'Пожалуйста, введите действительный номер телефона!'
-									)
-								);
-							},
-						}),
-					]}
-				>
-					<Input />
-				</Form.Item>
-				<Form.Item
-					label="Комментарий"
-					name="comment"
-					rules={[
-						{
-							required: false,
-						},
-					]}
-				>
-					<TextArea rows={4} />
-				</Form.Item>
-				<Form.Item wrapperCol={{ offset: 8, span: 16 }}>
-					<Button type="primary" htmlType="submit">
-						Отправить
-					</Button>
-				</Form.Item>
-			</Form>
+		<Section
+			className={styles.ContactSectionWrapper}
+			sectionClassName={styles.contactsSection}
+		>
+			<div className={styles.innerBox}>
+				<div className={styles.inputForm}>
+					<div className={styles.inputLabel}>Имя</div>
+					<Input
+						value={name}
+						onChange={(e) => setName(e.target.value)}
+					/>
+					<div className={styles.inputLabel}>Телефон</div>
+					<Input
+						value={phone}
+						onChange={(e) => setPhone(e.target.value)}
+					/>
+					<div className={styles.inputLabel}>Электронная почта</div>
+					<Input
+						value={email}
+						onChange={(e) => setEmail(e.target.value)}
+					/>
+					<div className={styles.inputLabel}>Комментарий</div>
+					<TextArea
+						rows={4}
+						value={message}
+						onChange={(e) => setMessage(e.target.value)}
+					/>
+					<div className={styles.sendButton}>Отправить</div>
+				</div>
+			</div>
 		</Section>
 	);
 };

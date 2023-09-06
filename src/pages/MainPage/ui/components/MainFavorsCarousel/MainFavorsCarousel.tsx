@@ -67,7 +67,10 @@ const MainFavorsCarousel: FC<IMainFavorsCarouselProps> = ({ cards }) => {
 	};
 
 	return (
-		<Section className={styles.carouselBox} heading="Наши услуги">
+		<Section
+			className={`${styles.carouselBox} carouselBox`}
+			heading="Наши услуги"
+		>
 			<ArrowLeftOutlined onClick={handlePrev} className={styles.button} />
 			<Card card={cards[0]} fixed={true} />
 			<div className={styles.carousel}>

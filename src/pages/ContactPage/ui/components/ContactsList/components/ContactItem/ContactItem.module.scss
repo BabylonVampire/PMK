@@ -1,0 +1,24 @@
+.contactItemBox {
+}
+.item {
+	display: flex;
+	flex-direction: row;
+	margin-block-end: calc(var(--index) * 0.5);
+}
+.icon {
+	color: var(--font-color-main);
+	font-size: var(--font-size-m);
+	margin-inline-end: calc(var(--index) * 0.5);
+}
+.text {
+	color: var(--font-color-dark);
+	font-size: var(--font-size-m);
+	font-family: var(--main-family);
+}
+.heading {
+	color: var(--font-color-main);
+	font-size: var(--font-size-m);
+	font-family: var(--main-family);
+	text-transform: uppercase;
+	margin: calc(var(--index) * 0.6) 0;
+}
