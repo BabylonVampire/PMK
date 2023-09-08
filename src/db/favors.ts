@@ -3,7 +3,7 @@ import { IFavor } from '@/types';
 export const favors: IFavor[] = [
 	{
 		id: 1,
-		name: 'Набить ебало',
+		name: 'Услуга',
 		price: '100р',
 		time: '5 минут',
 		description: [
@@ -23,7 +23,7 @@ export const favors: IFavor[] = [
 	},
 	{
 		id: 1,
-		name: 'Набить ебало',
+		name: 'Услуга',
 		price: '100р',
 		time: '5 минут',
 		description: [
@@ -43,7 +43,7 @@ export const favors: IFavor[] = [
 	},
 	{
 		id: 1,
-		name: 'Набить ебало',
+		name: 'Услуга',
 		price: '100р',
 		time: '5 минут',
 		description: [
@@ -63,7 +63,7 @@ export const favors: IFavor[] = [
 	},
 	{
 		id: 1,
-		name: 'Набить ебало',
+		name: 'Услуга',
 		price: '100р',
 		time: '5 минут',
 		description: [

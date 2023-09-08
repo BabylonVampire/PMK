@@ -28,7 +28,6 @@ const MainPage: FC<IMainPageProps> = () => {
 	useEffect(() => {
 		let newAngle = 360 - Math.round(Math.atan(height / width) * 57.3);
 		setAngle(newAngle);
-		console.log(newAngle, width, height);
 	}, [width, height]);
 	useEffect(() => {
 		animationStart();

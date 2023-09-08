@@ -1,0 +1,30 @@
+.FavorCardsSection {
+	min-height: 50vh;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--dark-color);
+	filter: drop-shadow(2px 4px 6px #000);
+}
+.innerContainer {
+	width: 90%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: calc(var(--index) * 2) 0;
+}
+.cardContainer {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+@media (max-width: 800px) {
+	.innerContainer {
+		width: 100%;
+	}
+}

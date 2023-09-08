@@ -2,7 +2,6 @@ import { FC } from 'react';
 import { Image } from 'antd';
 import styles from './CertificateSection.module.scss';
 import Section from '@/components/Section/Section';
-import Divider from '@/components/Divider/Divider';
 import { ICertificate } from '@/types';
 
 interface ICertificateSectionProps {
@@ -16,7 +15,6 @@ const CertificateSection: FC<ICertificateSectionProps> = ({ certificates }) => {
 			sectionClassName={styles.CertificateSectionWrapper}
 			className={styles.CertificatesContainer}
 		>
-			<Divider />
 			<div className={styles.description}>Лалала</div>
 			<div className={styles.images}>
 				{certificates.map((certificate) => {

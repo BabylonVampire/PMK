@@ -1,0 +1,30 @@
+.aboutFavorsSection {
+	width: 100%;
+	min-height: 40vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+.innerContainer {
+	height: 100%;
+	width: 80%;
+}
+.list {
+	line-height: calc(var(--index) * 1.5);
+}
+.listElement {
+	color: var(--font-color-dark);
+	font-size: var(--font-size-m);
+	font-family: var(--main-family);
+	list-style-position: inside;
+}
+.listElement::marker {
+	color: var(--font-color-main);
+}
+.text {
+	color: var(--font-color-dark);
+	font-size: var(--font-size-m);
+	font-family: var(--main-family);
+	line-height: calc(var(--index) * 1.5);
+}

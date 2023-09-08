@@ -9,19 +9,19 @@ export const advantages: IAdvantage[] = [
 	{
 		id: 1,
 		img: <LiaShieldAltSolid />,
-		title: 'Умеем срать',
-		description: 'Ты охуеешь',
+		title: 'Преимущество',
+		description: 'Так мы тоже можем',
 	},
 	{
 		id: 2,
 		img: <LiaUserTieSolid />,
-		title: 'Умеем срать',
-		description: 'Ты охуеешь',
+		title: 'Преимущество',
+		description: 'Так мы тоже можем',
 	},
 	{
 		id: 3,
 		img: <LiaHandshake />,
-		title: 'Умеем срать',
-		description: 'Ты охуеешь',
+		title: 'Преимущество',
+		description: 'Так мы тоже можем',
 	},
 ];

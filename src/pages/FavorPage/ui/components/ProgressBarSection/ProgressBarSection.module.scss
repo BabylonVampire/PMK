@@ -1,0 +1,79 @@
+.ProgressBarSection {
+	min-height: 70vh;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.innerBox {
+	width: 80%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+	position: relative;
+}
+.stepBox {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.stepsContainer {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+}
+.step:hover {
+	color: var(--font-color-main);
+}
+
+.step,
+.selectedStep {
+	padding: 0 calc(var(--index));
+	font-size: var(--font-size-l);
+	color: var(--font-color-dark);
+	font-family: var(--main-family);
+	transition: 0.15s linear;
+	cursor: pointer;
+	user-select: none;
+}
+
+.selectedStep {
+	color: var(--contrast-color-main);
+}
+
+.progressDynamicLine {
+	border-radius: 10px;
+	transition: 0.3s;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 10px;
+	background-color: var(--contrast-color-main);
+}
+
+.progressStaticLine {
+	border-radius: 10px;
+	width: 100%;
+	height: 10px;
+	background-color: var(--font-color-main);
+}
+
+.carouselSection {
+	font-size: var(--font-size-m);
+	color: var(--font-color-main);
+	font-family: var(--main-family);
+	width: calc(var(--index) * 30);
+	margin-bottom: calc(var(--index) * 2);
+}
+.slide {
+	width: calc(var(--index) * 30);
+	text-align: center;
+	height: calc(var(--index) * 10);
+}

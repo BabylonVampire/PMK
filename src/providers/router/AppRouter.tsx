@@ -7,6 +7,7 @@ import { MainPage } from '@pages/MainPage';
 import { FC, Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import styles from './AppRouter.module.scss';
+import PartnersPage from '@/pages/PartnersPage/PartnersPage';
 
 const AppRouter: FC = () => {
 	return (
@@ -20,9 +21,10 @@ const AppRouter: FC = () => {
 			<Routes>
 				<Route path="/" element={<MainPage />} />
 				<Route path="/about" element={<AboutPage />} />
-				<Route path="/favor" element={<FavorPage />}></Route>
-				<Route path="/articles" element={<ArticlePage />}></Route>
-				<Route path="/contacts" element={<ContactsPage />}></Route>
+				<Route path="/favor" element={<FavorPage />} />
+				<Route path="/articles" element={<ArticlePage />} />
+				<Route path="/contacts" element={<ContactsPage />} />
+				<Route path="/partners" element={<PartnersPage />} />
 			</Routes>
 		</Suspense>
 	);

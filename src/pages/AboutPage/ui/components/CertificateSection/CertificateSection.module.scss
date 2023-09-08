@@ -3,6 +3,7 @@
 	background-color: var(--dark-color);
 	margin-top: calc(var(--index));
 	padding-top: calc(var(--index) * 2);
+	filter: drop-shadow(2px 4px 6px #000);
 }
 .CertificatesContainer {
 	height: 70%;

@@ -64,16 +64,24 @@ const ContactSection: FC<IContactSectionProps> = ({ page }) => {
 						value={name}
 						onChange={(e) => setName(e.target.value)}
 					/>
-					<div className={styles.inputLabel}>Телефон</div>
-					<Input
-						value={phone}
-						onChange={(e) => setPhone(e.target.value)}
-					/>
-					<div className={styles.inputLabel}>Электронная почта</div>
-					<Input
-						value={email}
-						onChange={(e) => setEmail(e.target.value)}
-					/>
+					<div className={styles.phoneAndEmail}>
+						<div className={styles.group}>
+							<div className={styles.inputLabel}>Телефон</div>
+							<Input
+								value={phone}
+								onChange={(e) => setPhone(e.target.value)}
+							/>
+						</div>
+						<div className={styles.group}>
+							<div className={styles.inputLabel}>
+								Электронная почта
+							</div>
+							<Input
+								value={email}
+								onChange={(e) => setEmail(e.target.value)}
+							/>
+						</div>
+					</div>
 					<div className={styles.inputLabel}>Комментарий</div>
 					<TextArea
 						rows={4}
