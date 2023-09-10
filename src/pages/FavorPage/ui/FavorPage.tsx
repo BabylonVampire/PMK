@@ -6,7 +6,6 @@ import { favorCards } from '@/db';
 import AboutFavorsSection from './components/AboutFavorsSection/AboutFavorsSection';
 import FavorCards from './components/FavorCards/FavorCards';
 import ProgressBarSection from './components/ProgressBarSection/ProgressBarSection';
-
 import { PiMapPinFill } from 'react-icons/pi';
 
 interface IFavorPageProps {}

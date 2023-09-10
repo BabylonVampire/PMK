@@ -8,6 +8,7 @@ import { FC, Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import styles from './AppRouter.module.scss';
 import PartnersPage from '@/pages/PartnersPage/PartnersPage';
+import { NotFoundPage } from '@/pages/NotFoundPage';
 
 const AppRouter: FC = () => {
 	return (
@@ -25,6 +26,7 @@ const AppRouter: FC = () => {
 				<Route path="/articles" element={<ArticlePage />} />
 				<Route path="/contacts" element={<ContactsPage />} />
 				<Route path="/partners" element={<PartnersPage />} />
+				<Route path="*" element={<NotFoundPage />} />
 			</Routes>
 		</Suspense>
 	);

@@ -2,7 +2,7 @@ import { FC, useEffect, useRef, useState } from 'react';
 import styles from './MainFavorsCarousel.module.scss';
 import { ICard } from '@/types';
 import Card from './Card/Card';
-import { ArrowLeftOutlined, ArrowRightOutlined } from '@ant-design/icons';
+import { AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai';
 import './MainFavorsCarousel.module.scss';
 import Section from '@/components/Section/Section';
 
@@ -71,7 +71,10 @@ const MainFavorsCarousel: FC<IMainFavorsCarouselProps> = ({ cards }) => {
 			className={`${styles.carouselBox} carouselBox`}
 			heading="Наши услуги"
 		>
-			<ArrowLeftOutlined onClick={handlePrev} className={styles.button} />
+			<AiOutlineArrowLeft
+				onClick={handlePrev}
+				className={styles.button}
+			/>
 			<Card card={cards[0]} fixed={true} />
 			<div className={styles.carousel}>
 				<div className={styles.cards} ref={carouselRef}>
@@ -81,7 +84,7 @@ const MainFavorsCarousel: FC<IMainFavorsCarouselProps> = ({ cards }) => {
 				</div>
 				<div className={styles.buttonBox}></div>
 			</div>
-			<ArrowRightOutlined
+			<AiOutlineArrowRight
 				onClick={handleNext}
 				className={styles.button}
 			/>

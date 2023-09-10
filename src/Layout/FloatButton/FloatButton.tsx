@@ -1,12 +1,12 @@
 import { FC } from 'react';
 import styles from './FloatButton.module.scss';
-import { PhoneOutlined } from '@ant-design/icons';
+import { AiOutlinePhone } from 'react-icons/ai';
 
 const FloatButton: FC = () => {
 	return (
 		<div className={styles.floatButtonContainer}>
-			<a href='tel:+79260820975' className={styles.floatButton}>
-				<PhoneOutlined />
+			<a href="tel:+79260820975" className={styles.floatButton}>
+				<AiOutlinePhone />
 			</a>
 		</div>
 	);

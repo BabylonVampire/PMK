@@ -2,7 +2,7 @@ import { FC, useState } from 'react';
 import styles from './BurgerMenu.module.scss';
 import { headerLinks } from '@/db';
 import { Link } from 'react-router-dom';
-import { MenuOutlined } from '@ant-design/icons';
+import { FiMenu } from 'react-icons/fi';
 import { Drawer } from 'antd';
 import Logo from '../Logo/Logo';
 import Divider from '@/components/Divider/Divider';
@@ -46,7 +46,7 @@ const BurgerMenu: FC<IBurgerMenuProps> = () => {
 					</nav>
 				</Drawer>
 			) : (
-				<MenuOutlined onClick={() => setOpen((prev) => !prev)} />
+				<FiMenu onClick={() => setOpen((prev) => !prev)} />
 			)}
 		</div>
 	);
