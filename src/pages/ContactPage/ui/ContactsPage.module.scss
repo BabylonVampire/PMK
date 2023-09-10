@@ -19,3 +19,8 @@
 	z-index: -1;
 	filter: brightness(0.5) blur(1.5px);
 }
+@media (max-width: 800px) {
+	.ContactPageWrapper {
+		flex-direction: column;
+	}
+}

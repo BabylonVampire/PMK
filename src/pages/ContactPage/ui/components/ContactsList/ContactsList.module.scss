@@ -12,3 +12,9 @@
 	flex-direction: column;
 	justify-content: center;
 }
+@media (max-width: 800px) {
+	.contactsBox,
+	.contactsInnerBox {
+		align-items: center;
+	}
+}

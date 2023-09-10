@@ -16,6 +16,7 @@ const FavorList: FC<IFavorListProps> = ({ favors }) => {
 					{favors.map((favor) => {
 						return (
 							<Col
+								key={`favor${favors.indexOf(favor)}`}
 								xs={24}
 								sm={12}
 								md={8}

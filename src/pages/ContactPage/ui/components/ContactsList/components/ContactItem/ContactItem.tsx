@@ -12,7 +12,12 @@ const ContactItem: FC<IContactItemProps> = ({ contactItem }) => {
 			<div className={styles.heading}>{contactItem.heading}</div>
 			{contactItem.data.map((item) => {
 				return (
-					<div className={styles.item}>
+					<div
+						className={styles.item}
+						key={`contactItem${
+							contactItem.heading
+						}${contactItem.data.indexOf(item)}`}
+					>
 						<div className={styles.icon}>{contactItem.icon}</div>
 						<div className={styles.text}>{item}</div>
 					</div>

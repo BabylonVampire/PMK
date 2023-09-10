@@ -76,7 +76,7 @@ const MainFavorsCarousel: FC<IMainFavorsCarouselProps> = ({ cards }) => {
 			<div className={styles.carousel}>
 				<div className={styles.cards} ref={carouselRef}>
 					{cards.map((card) => (
-						<Card card={card} />
+						<Card card={card} key={`card${cards.indexOf(card)}`} />
 					))}
 				</div>
 				<div className={styles.buttonBox}></div>

@@ -39,11 +39,15 @@ const Header: FC<IHeaderProps> = memo(() => {
 				<nav className={styles.bigNav}>
 					<Logo hover onClick={() => nav('/')} />
 					{headerLinks.map((el) => {
-						return <NavButton link={el.link}>{el.text}</NavButton>;
+						return (
+							<NavButton
+								link={el.link}
+								key={`navButton${headerLinks.indexOf(el)}`}
+							>
+								{el.text}
+							</NavButton>
+						);
 					})}
-					{/* <div className={styles.logoBox}> */}
-					{/* <Logo hover onClick={() => nav('/')} /> */}
-					{/* </div> */}
 				</nav>
 			)}
 		</header>

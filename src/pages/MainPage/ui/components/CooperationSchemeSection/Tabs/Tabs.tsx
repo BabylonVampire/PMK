@@ -15,6 +15,7 @@ const Tabs: FC<ITabsProps> = ({ tabContent }) => {
 				{tabContent.map((tab) => {
 					return (
 						<div
+							key={`tab${tabContent.indexOf(tab)}`}
 							className={
 								tabContent.indexOf(tab) === currentTab
 									? styles.selectedTab

@@ -21,7 +21,12 @@ const ProjectsSection: FC<IProjectsSectionProps> = ({ project }) => {
 							.filter((el) => el.type === 'text')
 							.map((el) => {
 								return (
-									<p className={styles.description}>
+									<p
+										className={styles.description}
+										key={`projectSection${
+											project.title
+										}${project.content.indexOf(el)}`}
+									>
 										{el.value}
 									</p>
 								);

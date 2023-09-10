@@ -59,6 +59,7 @@
 }
 
 .progressStaticLine {
+	opacity: 0.4;
 	border-radius: 10px;
 	width: 100%;
 	height: 10px;
@@ -76,4 +77,10 @@
 	width: calc(var(--index) * 30);
 	text-align: center;
 	height: calc(var(--index) * 10);
+}
+
+@media (max-width: 800px) {
+	.carouselSection {
+		font-size: var(--font-size-l);
+	}
 }

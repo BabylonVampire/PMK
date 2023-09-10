@@ -22,7 +22,7 @@
 }
 .mainBox {
 	display: flex;
-	height: 20vh;
+	min-height: 20vh;
 	color: var(--font-color-main);
 	font-family: var(--main-family);
 	flex-direction: column;
@@ -30,7 +30,7 @@
 .link {
 	text-decoration: none;
 	color: var(--font-color-main);
-	font-size: calc(var(--index) * 0.8);
+	font-size: var(--font-size-m);
 }
 .options {
 	display: flex;

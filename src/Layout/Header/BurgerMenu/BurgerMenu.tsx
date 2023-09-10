@@ -22,7 +22,7 @@ const BurgerMenu: FC<IBurgerMenuProps> = () => {
 				<Drawer
 					title={<Logo />}
 					placement="left"
-					width={window.innerWidth * 0.4}
+					width={window.innerWidth * 0.5}
 					closable={false}
 					onClose={closeDrawer}
 					open={open}
@@ -32,7 +32,13 @@ const BurgerMenu: FC<IBurgerMenuProps> = () => {
 						<Divider />
 						{headerLinks.map((el) => {
 							return (
-								<Link onClick={closeDrawer} to={el.link}>
+								<Link
+									onClick={closeDrawer}
+									to={el.link}
+									key={`burgerNavButton${headerLinks.indexOf(
+										el
+									)}`}
+								>
 									{el.text}
 								</Link>
 							);

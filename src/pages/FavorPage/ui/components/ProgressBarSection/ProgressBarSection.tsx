@@ -38,7 +38,10 @@ const ProgressBarSection: FC<IProgressBarSectionProps> = ({
 			>
 				{progressBarSteps.map((step) => {
 					return (
-						<div className={styles.slide}>
+						<div
+							className={styles.slide}
+							key={`stepSlide${progressBarSteps.indexOf(step)}`}
+						>
 							<div className={styles.stepText}>{step.text}</div>
 						</div>
 					);
@@ -57,8 +60,9 @@ const ProgressBarSection: FC<IProgressBarSectionProps> = ({
 					{progressBarSteps.map((step) => {
 						return (
 							<div
+								key={`step${progressBarSteps.indexOf(step)}`}
 								className={
-									currentStep ===
+									currentStep >=
 									progressBarSteps.indexOf(step)
 										? styles.selectedStep
 										: styles.step

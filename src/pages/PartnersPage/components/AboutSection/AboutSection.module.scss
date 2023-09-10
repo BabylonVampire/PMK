@@ -14,6 +14,7 @@
 	align-items: center;
 }
 .innerBox {
+	position: relative;
 	width: 80%;
 	height: 90%;
 	display: flex;
@@ -49,6 +50,18 @@
 	margin: calc(var(--index)) 0;
 }
 .preview {
+	opacity: 0.6;
 	width: 35%;
 	filter: drop-shadow(2px 4px 6px black);
+}
+
+@media (max-width: 800px) {
+	.preview {
+		display: none;
+	}
+}
+@media (max-width: 600px) {
+	.description {
+		font-size: var(--font-size-l);
+	}
 }

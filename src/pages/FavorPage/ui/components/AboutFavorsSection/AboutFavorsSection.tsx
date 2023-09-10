@@ -13,7 +13,14 @@ const AboutFavorsSection: FC<IAboutFavorsSectionProps> = ({ text, list }) => {
 				<div className={styles.text}>{text}</div>
 				<ul className={styles.list}>
 					{list.map((item) => {
-						return <li className={styles.listElement}>{item}</li>;
+						return (
+							<li
+								className={styles.listElement}
+								key={`aboutFavorListItem${list.indexOf(item)}`}
+							>
+								{item}
+							</li>
+						);
 					})}
 				</ul>
 			</div>

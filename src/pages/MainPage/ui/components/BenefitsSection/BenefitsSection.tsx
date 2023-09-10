@@ -25,7 +25,13 @@ const BenefitsSection: FC<IBenefitsSectionProps> = ({ benefits }) => {
 					<Row>
 						{benefits.map((benefit) => {
 							return (
-								<Col xs={24} sm={12} md={12} lg={8}>
+								<Col
+									xs={24}
+									sm={12}
+									md={12}
+									lg={8}
+									key={`benefits${benefits.indexOf(benefit)}`}
+								>
 									<div className={styles.benefit}>
 										<div className={styles.benefitInnerBox}>
 											<div className={styles.icon}>

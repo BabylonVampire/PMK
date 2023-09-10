@@ -15,7 +15,14 @@ const FavorCards: FC<IFavorCardsProps> = ({ favorCards }) => {
 			<div className={styles.innerContainer}>
 				<Row className={styles.cardContainer} gutter={[0, 24]}>
 					{favorCards.map((favorCard) => {
-						return <Card favorCard={favorCard} />;
+						return (
+							<Card
+								favorCard={favorCard}
+								key={`favorCard${favorCards.indexOf(
+									favorCard
+								)}`}
+							/>
+						);
 					})}
 				</Row>
 			</div>

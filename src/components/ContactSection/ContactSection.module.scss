@@ -57,3 +57,23 @@
 .group {
 	width: 48%;
 }
+
+@media (max-width: 1200px) {
+	.innerBox {
+		width: 100%;
+	}
+}
+@media (max-width: 800px) or (max-height: 700px) {
+	.ContactSectionWrapper {
+		margin: calc(var(--index)) 0;
+	}
+	.inputLabel {
+		font-size: var(--font-size-m);
+	}
+	.phoneAndEmail {
+		flex-direction: column;
+	}
+	.group {
+		width: 100%;
+	}
+}

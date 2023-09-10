@@ -19,7 +19,12 @@ const CertificateSection: FC<ICertificateSectionProps> = ({ certificates }) => {
 			<div className={styles.images}>
 				{certificates.map((certificate) => {
 					return (
-						<div className={styles.imageWrapper}>
+						<div
+							className={styles.imageWrapper}
+							key={`certificate${certificates.indexOf(
+								certificate
+							)}`}
+						>
 							<Image
 								key={certificate.id}
 								width={300}

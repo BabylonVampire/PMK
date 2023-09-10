@@ -45,16 +45,7 @@
 	margin: 0 auto;
 }
 @media (max-width: 1000px) {
-	.content {
-		flex-direction: column;
-	}
 	.preview {
-		position: absolute;
-		top: 0;
-		left: 20%;
-		opacity: 0.2;
-		margin: 0 auto;
-		width: 60%;
-		z-index: -1;
+		display: none;
 	}
 }
