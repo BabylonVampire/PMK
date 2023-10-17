@@ -30,11 +30,14 @@
 .infoBtn {
 	width: 100%;
 	border: none;
-	color: var(--font-color-main);
 	background-color: var(--contrast-color-dark);
 	font-size: var(--font-size-s);
 	height: 60px;
 	transition: 0.3s;
+	& > * {
+		color: var(--font-color-main);
+		text-decoration: none;
+	}
 
 	&:hover {
 		box-shadow: 0px -1px 12px 0px #000000;

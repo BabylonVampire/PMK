@@ -35,3 +35,10 @@
 	font-family: var(--heading-family);
 	font-size: calc(var(--index) * 1);
 }
+
+@media (max-width: 1000px) {
+	.LogoWrapper {
+		scale: 1.4;
+		margin-inline-start: calc(var(--index) * 2);
+	}
+}

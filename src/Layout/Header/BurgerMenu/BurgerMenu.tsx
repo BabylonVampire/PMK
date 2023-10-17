@@ -20,7 +20,7 @@ const BurgerMenu: FC<IBurgerMenuProps> = () => {
 		<div className={styles.burgerMenu}>
 			{open ? (
 				<Drawer
-					title={<Logo />}
+					// title={<Logo />}
 					placement="left"
 					width={window.innerWidth * 0.5}
 					closable={false}

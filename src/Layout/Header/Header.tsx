@@ -34,7 +34,10 @@ const Header: FC<IHeaderProps> = memo(() => {
 	return (
 		<header className={styles.header}>
 			{burger ? (
-				<BurgerMenu />
+				<div className={styles.burgerWrapper}>
+					<BurgerMenu />
+					<Logo hover onClick={() => nav('/')} />
+				</div>
 			) : (
 				<nav className={styles.bigNav}>
 					<Logo hover onClick={() => nav('/')} />

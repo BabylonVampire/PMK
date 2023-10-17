@@ -11,6 +11,13 @@
 	display: flex;
 }
 
+.burgerWrapper {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: row;
+}
+
 @media (max-width: 1000px) {
 	.header {
 		justify-content: flex-start;

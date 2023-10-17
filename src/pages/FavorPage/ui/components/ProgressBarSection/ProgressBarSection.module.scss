@@ -77,8 +77,26 @@
 	width: calc(var(--index) * 30);
 	text-align: center;
 	height: calc(var(--index) * 10);
+	display: flex !important;
+	flex-direction: row;
+	justify-content: center;
 }
-
+.verticalDivider {
+	width: 3px;
+	background-color: var(--font-color-main);
+	margin: 0 calc(var(--index));
+}
+.stepIndex {
+	font-size: calc(var(--index) * 3);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.stepText {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
 @media (max-width: 800px) {
 	.carouselSection {
 		font-size: var(--font-size-l);

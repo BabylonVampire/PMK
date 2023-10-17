@@ -42,6 +42,10 @@ const ProgressBarSection: FC<IProgressBarSectionProps> = ({
 							className={styles.slide}
 							key={`stepSlide${progressBarSteps.indexOf(step)}`}
 						>
+							<div className={styles.stepIndex}>
+								0{progressBarSteps.indexOf(step) + 1}
+							</div>
+							<div className={styles.verticalDivider} />
 							<div className={styles.stepText}>{step.text}</div>
 						</div>
 					);
