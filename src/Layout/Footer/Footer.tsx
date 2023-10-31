@@ -1,5 +1,9 @@
 import { FC, memo } from 'react';
 import styles from './Footer.module.scss';
+import { FaTelegram, FaYoutube, FaInstagram } from 'react-icons/fa6';
+import { v4 } from 'uuid';
+import { headerLinks } from '@/db';
+import { phones, emails } from '@/db/contactItems';
 import { Link } from 'react-router-dom';
 
 interface IFooterProps {}
@@ -11,44 +15,59 @@ const Footer: FC<IFooterProps> = memo(() => {
 			<div className={styles.FooterContainer}>
 				<div className={styles.mainBox}>
 					<ul className={styles.optionsCol}>
-						<li>
-							<Link to="/" className={styles.link}>
-								Главная
-							</Link>
+						<div className={styles.colHeading}>Навигация</div>
+						<div className={styles.divider} />
+						{headerLinks.map((link) => {
+							return (
+								<li className={styles.option} key={v4()}>
+									<Link
+										to={link.link}
+										className={styles.link}
+									>
+										{link.text}
+									</Link>
+								</li>
+							);
+						})}
+					</ul>
+
+					<ul className={styles.contactsCol}>
+						<div className={styles.colHeading}>Контакты</div>
+						<div className={styles.divider} />
+						{phones.data.map((phone) => {
+							return (
+								<li className={styles.contact} key={v4()}>
+									{phone}
+								</li>
+							);
+						})}
+						{emails.data.map((email) => {
+							return (
+								<li className={styles.contact} key={v4()}>
+									{email}
+								</li>
+							);
+						})}
+					</ul>
+					<ul className={styles.linksCol}>
+						<div className={styles.colHeading}>Наши соцсети</div>
+						<div className={styles.divider} />
+						<li className={styles.outLink}>
+							<FaTelegram />
 						</li>
-						<li>
-							<Link to="/favor" className={styles.link}>
-								Услуги
-							</Link>
+						<li className={styles.outLink}>
+							<FaYoutube />
 						</li>
-						<li>
-							<Link to="/about" className={styles.link}>
-								О нас
-							</Link>
-						</li>
-						<li>
-							<Link to="/articles" className={styles.link}>
-								Статьи
-							</Link>
-						</li>
-						<li>
-							<Link to="/partners" className={styles.link}>
-								Партнерам
-							</Link>
-						</li>
-						<li>
-							<Link to="/contacts" className={styles.link}>
-								Контакты
-							</Link>
+						<li className={styles.outLink}>
+							<FaInstagram />
 						</li>
 					</ul>
-					<ul className={styles.contactsCol}></ul>
 				</div>
 			</div>
 			<div className={styles.copyright}>
 				<p>
 					© {date} Все права защищены. Сделано компанией Gafurov
-					Software Production
+					digital Production
 				</p>
 			</div>
 		</footer>
