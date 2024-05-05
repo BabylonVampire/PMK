@@ -52,15 +52,17 @@ const Footer: FC<IFooterProps> = memo(() => {
 					<ul className={styles.linksCol}>
 						<div className={styles.colHeading}>Наши соцсети</div>
 						<div className={styles.divider} />
-						<li className={styles.outLink}>
-							<FaTelegram />
-						</li>
-						<li className={styles.outLink}>
-							<FaYoutube />
-						</li>
-						<li className={styles.outLink}>
-							<FaInstagram />
-						</li>
+						<div className={styles.links}>
+							<li className={styles.outLink}>
+								<FaTelegram />
+							</li>
+							<li className={styles.outLink}>
+								<FaYoutube />
+							</li>
+							<li className={styles.outLink}>
+								<FaInstagram />
+							</li>
+						</div>
 					</ul>
 				</div>
 			</div>

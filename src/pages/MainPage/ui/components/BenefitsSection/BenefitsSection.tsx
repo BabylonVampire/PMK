@@ -2,7 +2,6 @@ import Section from '@/components/Section/Section';
 import { FC } from 'react';
 import styles from './BenefitsSection.module.scss';
 import { IBenefit } from '@/types/benefit.interface';
-import { Col, Row } from 'antd';
 import Divider from '@/components/Divider/Divider';
 
 interface IBenefitsSectionProps {
@@ -16,36 +15,28 @@ const BenefitsSection: FC<IBenefitsSectionProps> = ({ benefits }) => {
 			<div className={styles.benefitsInnerBox}>
 				<div className={styles.headingAndDescription}>
 					<div className={styles.heading}>Наши преимущества</div>
-					<div className={styles.description}>
-						Лалалалалалалал ала алалал алалал алал ал алалал
-					</div>
+					<Divider />
 				</div>
-				<Divider />
 				<div className={styles.benefitsBox}>
-					<Row>
+					<div className={styles.benefitsGrid}>
 						{benefits.map((benefit) => {
 							return (
-								<Col
-									xs={24}
-									sm={12}
-									md={12}
-									lg={8}
+								<div
+									className={styles.benefit}
 									key={`benefits${benefits.indexOf(benefit)}`}
 								>
-									<div className={styles.benefit}>
-										<div className={styles.benefitInnerBox}>
-											<div className={styles.icon}>
-												{benefit.icon}
-											</div>
-											<div className={styles.text}>
-												{benefit.text}
-											</div>
+									<div className={styles.benefitInnerBox}>
+										<div className={styles.icon}>
+											{benefit.icon}
+										</div>
+										<div className={styles.text}>
+											{benefit.text}
 										</div>
 									</div>
-								</Col>
+								</div>
 							);
 						})}
-					</Row>
+					</div>
 				</div>
 			</div>
 		</Section>

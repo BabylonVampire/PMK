@@ -1,10 +1,9 @@
 .ProjectsSectionWrapper {
 	background-color: var(--dark-color);
-	filter: drop-shadow(2px 4px 6px #000);
+	box-shadow: 0px 1px 4px 1px #000;
 }
 .ProjectsSectionContainer {
-	padding: calc(var(--index));
-	min-height: 50vh;
+	padding: 10px;
 	max-width: 1600px;
 	margin: 0 auto;
 	display: flex;
@@ -29,13 +28,13 @@
 	display: flex;
 	flex-direction: column;
 	width: 100%;
-	margin-inline-end: calc(var(--index));
+	margin-inline-end: 10px;
 }
 .description {
-	font-size: var(--font-size-m);
+	font-size: calc(var(--font-size-m) * 0.8);
 	color: var(--font-color-dark);
 	font-family: var(--main-family);
-	margin: calc(var(--index)) 0;
+	margin: 10px 0;
 }
 .preview {
 	width: 40%;

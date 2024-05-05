@@ -1,6 +1,5 @@
 .callUsButton {
-	width: calc(var(--index) * 8);
-	height: calc(var(--index) * 2.5);
+	padding: 15px;
 	border-radius: 10px;
 	border: none;
 	background-color: var(--contrast-color-dark);
@@ -8,7 +7,6 @@
 	font-size: var(--font-size-m);
 	color: var(--font-color-main);
 	cursor: pointer;
-	margin-top: calc(var(--index) * 1.5);
 	transition: 0.3s;
 }
 .callUsButton:hover {

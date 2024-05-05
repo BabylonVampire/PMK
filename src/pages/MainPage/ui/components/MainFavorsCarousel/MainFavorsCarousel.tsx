@@ -48,7 +48,7 @@ const MainFavorsCarousel: FC<IMainFavorsCarouselProps> = ({ cards }) => {
 				index * 320
 			}px)`;
 		}
-	}, [index, count]);
+	}, [index, count, cards.length]);
 
 	const handlePrev = () => {
 		if (index > 0) {
@@ -75,7 +75,6 @@ const MainFavorsCarousel: FC<IMainFavorsCarouselProps> = ({ cards }) => {
 				onClick={handlePrev}
 				className={styles.button}
 			/>
-			<Card card={cards[0]} fixed={true} />
 			<div className={styles.carousel}>
 				<div className={styles.cards} ref={carouselRef}>
 					{cards.map((card) => (

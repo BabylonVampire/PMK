@@ -1,13 +1,10 @@
-import { FC } from 'react';
-import styles from './AboutSection.module.scss';
-import Section from '@/components/Section/Section';
 import Divider from '@/components/Divider/Divider';
+import Section from '@/components/Section/Section';
+import styles from './AboutSection.module.scss';
 
-interface IAboutSectionProps {}
-
-const AboutSection: FC<IAboutSectionProps> = ({}) => {
+const AboutSection = () => {
 	return (
-		<Section className={styles.aboutSection}>
+		<Section className={styles.aboutSection} style={{ paddingTop: 0 }}>
 			<div className={styles.innerBox}>
 				<div className={styles.contentBox}>
 					<h3 className={styles.title}>asdasd</h3>
@@ -18,7 +15,7 @@ const AboutSection: FC<IAboutSectionProps> = ({}) => {
 				</div>
 				<img
 					className={styles.preview}
-					src="/src/assets/images/partners.png"
+					src="http://gafurov-prod-test.ru/assets/partners.png"
 					alt="asd"
 				/>
 			</div>

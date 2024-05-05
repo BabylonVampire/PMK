@@ -1,25 +1,30 @@
-import { ICooperationTab } from "@/types";
-import { AuditOutlined, CheckOutlined, MessageOutlined, StarOutlined } from "@ant-design/icons";
+import { ICooperationTab } from '@/types';
+import {
+	AuditOutlined,
+	CheckOutlined,
+	MessageOutlined,
+	StarOutlined,
+} from '@ant-design/icons';
 
 export const cooperationTabs: ICooperationTab[] = [
 	{
-		text: 'tab 1',
-		tabHeading: 'tab 1',
+		text: 'Знакомимся с вами с помощью формы на сайте или звонка, собираем первичную информацию об объекте, выясняем задачи и определяем сложность работ.',
+		tabHeading: 'Заявка',
 		icon: <CheckOutlined />,
 	},
 	{
-		text: 'tab 2',
-		tabHeading: 'tab 2',
+		text: 'Отвечаем на появляющиеся у вас вопросы, рассказываем каким образом мы можем закрыть ваши потребности, ставим цели и разрабатываем стратегию по работе с объектом.',
+		tabHeading: 'Консультация',
 		icon: <MessageOutlined />,
 	},
 	{
-		text: 'tab 3',
-		tabHeading: 'tab 3',
+		text: 'Только после определения целей и разработки стратегии, подсчитываем стоимость услуг и высылаем предложение в удобном для вас формате.',
+		tabHeading: 'Предложение',
 		icon: <StarOutlined />,
 	},
 	{
-		text: 'tab 4',
-		tabHeading: 'tab 4',
+		text: 'После согласования коммерческого предложения заключаем договор и в соответствии с ним начинаем работы.',
+		tabHeading: 'Договор',
 		icon: <AuditOutlined />,
 	},
-]
+];

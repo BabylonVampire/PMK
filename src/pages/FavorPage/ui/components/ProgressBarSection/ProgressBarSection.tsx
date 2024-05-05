@@ -19,7 +19,7 @@ const ProgressBarSection: FC<IProgressBarSectionProps> = ({
 	const slider = useRef<any>();
 
 	useEffect(() => {
-		let newWidth =
+		const newWidth =
 			numOfSteps - 1 === currentStep
 				? 100
 				: (100 / numOfSteps) * currentStep + 100 / numOfSteps / 2;

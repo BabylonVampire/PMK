@@ -1,10 +1,8 @@
-import { FC, useState } from 'react';
-import styles from './FeedBack.module.scss';
+import Section from '@/components/Section/Section';
 import emailjs from '@emailjs/browser';
 import { Input } from 'antd';
-import Section from '@/components/Section/Section';
-
-interface IFeedBackProps {}
+import { useState } from 'react';
+import styles from './FeedBack.module.scss';
 
 const checkPhone = (phone: string) => {
 	return /^\+?(\d[\d\-\\+\\(\\) ]{5,}\d$)/.test(phone);
@@ -12,7 +10,7 @@ const checkPhone = (phone: string) => {
 
 const { TextArea } = Input;
 
-const FeedBack: FC<IFeedBackProps> = ({}) => {
+const FeedBack = () => {
 	const [name, setName] = useState<string>('');
 	const [phone, setPhone] = useState<string>('');
 	const [message, setMessage] = useState<string>('');
@@ -71,7 +69,9 @@ const FeedBack: FC<IFeedBackProps> = ({}) => {
 					/>
 				</div>
 			</div>
-			<div className={styles.sendButton}>Отправить</div>
+			<button className={styles.sendButton} onClick={sendEmail}>
+				Отправить
+			</button>
 		</Section>
 	);
 };

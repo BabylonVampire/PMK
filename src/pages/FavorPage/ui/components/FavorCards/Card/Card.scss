@@ -4,7 +4,7 @@
 
 .card {
 	width: 100%;
-	margin: 0 calc(var(--index) * 0.5);
+	margin: 0 5px;
 	overflow: hidden;
 	position: relative;
 	display: flex;
@@ -92,11 +92,5 @@
 		opacity: 1;
 		visibility: visible;
 		transition: 0.2s 0.3s;
-	}
-}
-
-@media (max-width: 1000px) {
-	.cards__item {
-		height: calc(var(--index) * 18);
 	}
 }

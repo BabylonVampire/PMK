@@ -1,31 +1,35 @@
-.contactItemBox {
-}
 .item {
 	display: flex;
 	flex-direction: row;
-	margin-block-end: calc(var(--index) * 0.5);
+	margin-block-end: 10px;
 }
+
 .icon {
 	color: var(--font-color-main);
 	font-size: var(--font-size-m);
-	margin-inline-end: calc(var(--index) * 0.5);
+	margin-inline-end: 10px;
+	line-height: 0;
 }
+
 .text {
 	color: var(--font-color-dark);
 	font-size: var(--font-size-m);
 	font-family: var(--main-family);
 }
+
 .heading {
 	color: var(--font-color-main);
 	font-size: var(--font-size-m);
 	font-family: var(--main-family);
 	text-transform: uppercase;
-	margin: calc(var(--index) * 0.6) 0;
+	margin: 10px 0;
 }
+
 @media (max-width: 800px) {
 	.contactItemBox {
 		text-align: center;
 	}
+
 	.text,
 	.heading,
 	.icon {

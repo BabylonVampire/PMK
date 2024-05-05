@@ -6,15 +6,7 @@
 	flex-direction: column;
 	align-items: center;
 }
-.background {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	background-image: url(/src/assets/images/background.png);
-	z-index: -1;
-	scale: 1.01;
-	filter: brightness(0.5) blur(1.5px);
-}
+
 .innerBox {
 	position: absolute;
 	width: 80%;

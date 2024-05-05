@@ -4,8 +4,8 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 const animationStart = () => {
 	gsap.registerPlugin(ScrollTrigger);
 
-	let serviceBlocks = gsap.utils.toArray<HTMLElement>('.serviceBlock');
-	let memberCards = gsap.utils.toArray<HTMLElement>('.memberCard');
+	const serviceBlocks = gsap.utils.toArray<HTMLElement>('.serviceBlock');
+	const memberCards = gsap.utils.toArray<HTMLElement>('.memberCard');
 
 	gsap.fromTo(
 		'.aboutSectionPic',

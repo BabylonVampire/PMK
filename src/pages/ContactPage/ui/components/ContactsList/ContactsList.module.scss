@@ -5,6 +5,7 @@
 	align-items: flex-end;
 	justify-content: center;
 }
+
 .contactsInnerBox {
 	width: 60%;
 	height: 90%;
@@ -12,6 +13,7 @@
 	flex-direction: column;
 	justify-content: center;
 }
+
 @media (max-width: 800px) {
 	.contactsBox,
 	.contactsInnerBox {

@@ -16,9 +16,9 @@
 }
 
 .logo {
-	margin-inline-end: calc(var(--index) * 0.3);
-	height: calc(var(--index) * 2);
-	width: calc(var(--index) * 2);
+	height: calc(var(--font-size-m) * 2);
+	width: calc(var(--font-size-m) * 2);
+	margin-right: 8px;
 	background-image: url(/src/assets/images/logo.png);
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -27,18 +27,11 @@
 .description {
 	color: var(--font-color-main);
 	font-family: var(--heading-family);
-	font-size: calc(var(--index) * 0.41);
+	font-size: calc(var(--font-size-m) * 0.41);
 }
 
 .heading {
 	color: var(--font-color-main);
 	font-family: var(--heading-family);
-	font-size: calc(var(--index) * 1);
-}
-
-@media (max-width: 1000px) {
-	.LogoWrapper {
-		scale: 1.4;
-		margin-inline-start: calc(var(--index) * 2);
-	}
+	font-size: var(--font-size-m);
 }

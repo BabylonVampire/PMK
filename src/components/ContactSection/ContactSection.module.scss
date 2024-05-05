@@ -3,12 +3,12 @@
 }
 
 .ContactSectionWrapper {
-	min-height: 50vh;
 	width: 100%;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	padding: 20px 0;
 }
 .innerBox {
 	width: 80%;
@@ -22,17 +22,16 @@
 	width: 60%;
 }
 .inputLabel {
-	margin-top: calc(var(--index));
-	margin-bottom: calc(var(--index) * 0.5);
+	margin-top: 10px;
+	margin-bottom: 5px;
 	color: var(--font-color-main);
-	font-size: var(--font-size-s);
+	font-size: 22px;
 	font-family: var(--main-family);
 }
 .sendButton {
 	margin: 0 auto;
 	display: flex;
-	width: calc(var(--index) * 8);
-	height: calc(var(--index) * 2.5);
+	padding: 15px;
 	border-radius: 10px;
 	border: none;
 	background-color: var(--contrast-color-dark);
@@ -40,7 +39,7 @@
 	font-size: var(--font-size-m);
 	color: var(--font-color-main);
 	cursor: pointer;
-	margin-top: calc(var(--index) * 1.5);
+	margin-top: 15px;
 	transition: 0.3s;
 	align-items: center;
 	justify-content: center;
@@ -65,7 +64,7 @@
 }
 @media (max-width: 800px) or (max-height: 700px) {
 	.ContactSectionWrapper {
-		margin: calc(var(--index)) 0;
+		margin: 10px 0;
 	}
 	.inputLabel {
 		font-size: var(--font-size-m);

@@ -1,14 +1,23 @@
 .heading {
-	font-size: calc(var(--index) * 2);
+	font-size: calc(var(--font-size-m) * 2);
 	font-family: var(--heading-family);
 	color: var(--font-color-main);
 	padding: 15px 0;
 }
-.Section {
+
+.section {
+	padding: 50px 0;
 }
+
 .headingBox {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+}
+
+@media (max-width: 800px) {
+	.section {
+		padding: 20px 0;
+	}
 }

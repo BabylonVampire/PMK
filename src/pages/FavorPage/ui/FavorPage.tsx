@@ -1,45 +1,17 @@
-import { FC, useEffect, useState } from 'react';
+import { favorCards, favors } from '@/db';
+import { PiMapPinFill } from 'react-icons/pi';
 import styles from './FavorPage.module.scss';
-import FavorList from './components/FavorList/FavorList';
-import { favors } from '@/db';
-import { favorCards } from '@/db';
 import AboutFavorsSection from './components/AboutFavorsSection/AboutFavorsSection';
 import FavorCards from './components/FavorCards/FavorCards';
+import FavorList from './components/FavorList/FavorList';
 import ProgressBarSection from './components/ProgressBarSection/ProgressBarSection';
-import { PiMapPinFill } from 'react-icons/pi';
 
-interface IFavorPageProps {}
-
-const FavorPage: FC<IFavorPageProps> = () => {
-	const [width, setWidth] = useState<number>(0);
-	const [height, setHeight] = useState<number>(0);
-	const [angle, setAngle] = useState<number>(0);
-	useEffect(() => {
-		const handleResize = () => {
-			setWidth(document.body.scrollWidth);
-			setHeight(document.body.scrollHeight);
-		};
-		handleResize();
-		window.addEventListener('resize', handleResize);
-		return () => {
-			window.removeEventListener('resize', handleResize);
-		};
-	}, []);
-	useEffect(() => {
-		let newAngle = 180 - Math.round(Math.atan(height / width) * 57.3);
-		setAngle(newAngle);
-	}, [width, height]);
+const FavorPage = () => {
 	return (
-		<main
-			className={styles.FavorPageWrapper}
-			style={{
-				background: `linear-gradient(${angle}deg, rgba(23,29,61,1) 50%, rgba(0,0,0,0.7) 50%, rgba(23,29,61,0) 51%)`,
-			}}
-		>
-			<div className={styles.background} />
+		<main className={styles.FavorPageWrapper}>
 			<AboutFavorsSection
-				text="asdasdasdasdasdasda asda sdas das dasda sdasdadaa asd asd as as asdadadasd ashjg asj hajsgdjhasgdjahsd hgdjas jahgsd jjhasdgaj ajhdgasjhdgasj ajshdgajhd ajshdgajhgdja jahgdj had asdgasd gasjhasa ahsjgaj asg"
-				list={['asd', 'asdasd', 'asdad']}
+				text="Мы предоставляем лицензированные услуги на объектах строительства различной сложности и назначения в Москве и Московской области, умеем решать нестандартные вопросы и всегда стремимся к высшему качеству оказания услуг на рынке."
+				list={[]}
 			/>
 			<FavorCards favorCards={favorCards} />
 			<ProgressBarSection

@@ -1,9 +1,10 @@
 .floatButtonContainer {
-	width: 8em;
-	height: 8em;
+	width: 120px;
+	height: 120px;
 	position: fixed;
 	bottom: 0;
 	right: 0;
+	z-index: 999;
 }
 .floatButton {
 	display: flex;

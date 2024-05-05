@@ -9,7 +9,7 @@ export const articles: IArticle[] = [
 			month: 'Августа',
 			year: '2023',
 		},
-		preview: 'src/assets/images/about.png',
+		preview: `http://gafurov-prod-test.ru/assets/about.png`,
 		content: [
 			{
 				type: 'heading',
@@ -21,7 +21,7 @@ export const articles: IArticle[] = [
 			},
 			{
 				type: 'image',
-				value: 'src/assets/images/about.png',
+				value: `http://gafurov-prod-test.ru/assets/about.png`,
 			},
 			{
 				type: 'list',
@@ -37,7 +37,7 @@ export const articles: IArticle[] = [
 			month: 'Августа',
 			year: '2023',
 		},
-		preview: 'src/assets/images/about.png',
+		preview: `http://gafurov-prod-test.ru/assets/about.png`,
 		content: [
 			{
 				type: 'heading',
@@ -49,7 +49,7 @@ export const articles: IArticle[] = [
 			},
 			{
 				type: 'image',
-				value: 'src/assets/images/about.png',
+				value: `http://gafurov-prod-test.ru/assets/about.png`,
 			},
 			{
 				type: 'list',

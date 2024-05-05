@@ -1,5 +1,4 @@
 import { FC } from 'react';
-import styles from './ArticleContent.module.scss';
 import { IArticleContent } from '@/types';
 
 interface IArticleContentProps {

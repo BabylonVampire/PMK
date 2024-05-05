@@ -1,7 +1,7 @@
 import { FC, useState } from 'react';
 import styles from './BurgerMenu.module.scss';
 import { headerLinks } from '@/db';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { FiMenu } from 'react-icons/fi';
 import { Drawer } from 'antd';
 import Logo from '../Logo/Logo';
@@ -16,11 +16,12 @@ const BurgerMenu: FC<IBurgerMenuProps> = () => {
 		setOpen(false);
 	};
 
+	const navigate = useNavigate();
+
 	return (
 		<div className={styles.burgerMenu}>
 			{open ? (
 				<Drawer
-					// title={<Logo />}
 					placement="left"
 					width={window.innerWidth * 0.5}
 					closable={false}
@@ -29,6 +30,7 @@ const BurgerMenu: FC<IBurgerMenuProps> = () => {
 					className={styles.burgerMenuBody}
 				>
 					<nav className={styles.BurgerMenuWrapper}>
+						<Logo hover onClick={() => navigate('/')} />
 						<Divider />
 						{headerLinks.map((el) => {
 							return (

@@ -1,11 +1,9 @@
-import { FC } from 'react';
 import styles from './CallUsButton.module.scss';
 import { useNavigate } from 'react-router-dom';
 
-interface ICallUsButtonProps {}
+const CallUsButton = () => {
+	const nav = useNavigate();
 
-const CallUsButton: FC<ICallUsButtonProps> = ({}) => {
-	let nav = useNavigate();
 	return (
 		<button
 			className={styles.callUsButton}

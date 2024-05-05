@@ -28,6 +28,7 @@ const ContactSection: FC<IContactSectionProps> = ({ page }) => {
 		phone: `${phone}`,
 		message: `${message}`,
 		email: `${email}`,
+		page: page,
 	};
 
 	const sendEmail = () => {
@@ -88,7 +89,9 @@ const ContactSection: FC<IContactSectionProps> = ({ page }) => {
 						value={message}
 						onChange={(e) => setMessage(e.target.value)}
 					/>
-					<div className={styles.sendButton}>Отправить</div>
+					<button className={styles.sendButton} onClick={sendEmail}>
+						Отправить
+					</button>
 				</div>
 			</div>
 		</Section>

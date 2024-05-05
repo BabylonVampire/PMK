@@ -6,6 +6,7 @@ interface IArticleProps {
 }
 
 const Article: FC<IArticleProps> = ({ article }) => {
+	console.log(article);
 	return (
 		<div className="Article">
 			<div className="articleContainer"></div>

@@ -1,17 +1,16 @@
 .aboutSection {
-	padding: calc(var(--index) * 2) 0;
-	min-height: calc(var(--index) * 25);
 	width: 100%;
 	background-color: var(--dark-color);
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	margin-bottom: calc(var(--index) * 2);
-	filter: drop-shadow(2px 4px 6px #000);
+	box-shadow: 0px 1px 4px 1px #000;
 }
+
 .innerContainer {
 	height: 90%;
 	width: 90%;
+	padding: 50px 0;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
@@ -42,10 +41,10 @@
 	font-family: var(--heading-family);
 	font-size: var(--font-size-l);
 	color: var(--font-color-main);
-	margin-bottom: calc(var(--index) * 0.5);
+	margin-bottom: 5px;
 }
 .description {
-	margin-top: calc(var(--index) * 0.5);
+	margin-top: 5px;
 	font-family: var(--main-family);
 	font-size: var(--font-size-m);
 	color: var(--font-color-dark);
@@ -55,8 +54,6 @@
 	.pictureBox {
 		position: absolute;
 		display: flex;
-		height: 60%;
-		width: 60%;
 		align-items: center;
 		justify-content: center;
 		opacity: 0.1;
@@ -67,6 +64,7 @@
 	}
 	.picture {
 		height: calc(var(--index) * 25);
+		opacity: 0.1;
 	}
 }
 

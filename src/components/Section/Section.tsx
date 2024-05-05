@@ -6,16 +6,21 @@ interface ISectionProps {
 	heading?: string;
 	className?: string;
 	sectionClassName?: string;
+	style?: React.CSSProperties;
 }
 
 const Section: FC<PropsWithChildren<ISectionProps>> = ({
 	children,
 	heading,
 	className,
-	sectionClassName,
+	sectionClassName = '',
+	style,
 }) => {
 	return (
-		<section className={`${styles.Section} ${sectionClassName}`}>
+		<section
+			className={`${styles.section} ${sectionClassName}`}
+			style={style}
+		>
 			{heading && (
 				<div className={styles.headingBox}>
 					<h2 className={styles.heading}>{heading}</h2>
