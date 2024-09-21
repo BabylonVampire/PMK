@@ -1,28 +1,28 @@
-import { IHeaderLink } from "@/types";
+import { IHeaderLink } from '@/types';
 
 export const headerLinks: IHeaderLink[] = [
 	{
 		link: '/',
-		text: 'Главная'
+		text: 'Главная',
 	},
 	{
 		link: '/favor',
-		text: 'Услуги'
+		text: 'Услуги',
 	},
 	{
 		link: '/about',
-		text: 'О нас'
+		text: 'О нас',
 	},
-	{
-		link: '/articles',
-		text: 'Статьи'
-	},
+	// {
+	// 	link: '/articles',
+	// 	text: 'Статьи'
+	// },
 	{
 		link: '/partners',
-		text: 'Партнерам'
+		text: 'Партнерам',
 	},
 	{
 		link: '/contacts',
-		text: 'Контакты'
-	}
-]
+		text: 'Контакты',
+	},
+];

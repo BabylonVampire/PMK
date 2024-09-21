@@ -15,7 +15,7 @@ const AboutPage: FC<IAboutPageProps> = () => {
 			<ProjectsSection project={project} />
 			<AdvantagesSection advantages={advantages} />
 			<CertificateSection certificates={certificates} />
-			<ContactSection page="about" />
+			<ContactSection />
 		</main>
 	);
 };

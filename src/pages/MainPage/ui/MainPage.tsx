@@ -7,6 +7,7 @@ import BenefitsSection from './components/BenefitsSection/BenefitsSection';
 import CooperationSchemeSection from './components/CooperationSchemeSection/CooperationSchemeSection';
 import HeroSection from './components/HeroSection/HeroSection';
 import MainFavorsCarousel from './components/MainFavorsCarousel/MainFavorsCarousel';
+import ContactSection from '@/components/ContactSection/ContactSection';
 
 interface IMainPageProps {}
 
@@ -22,6 +23,9 @@ const MainPage: FC<IMainPageProps> = () => {
 			<MainFavorsCarousel cards={cards} />
 			<BenefitsSection benefits={benefits} />
 			<CooperationSchemeSection cooperationTabs={cooperationTabs} />
+			<div className={styles.sectionWrapper}>
+				<ContactSection />
+			</div>
 		</main>
 	);
 };

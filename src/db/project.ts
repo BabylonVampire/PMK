@@ -8,7 +8,7 @@ export const project: IArticle = {
 		month: 'Сентябрь',
 		year: '2023',
 	},
-	preview: `http://gafurov-prod-test.ru/assets/partners.png`,
+	preview: `${import.meta.env.VITE_PATH_TO_PORTFOLIO}/partners.png`,
 	content: [
 		{
 			type: 'text',

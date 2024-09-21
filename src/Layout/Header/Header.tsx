@@ -39,17 +39,45 @@ const Header: FC<IHeaderProps> = memo(() => {
 				</div>
 			) : (
 				<nav className={styles.bigNav}>
-					<Logo hover onClick={() => nav('/')} />
-					{headerLinks.map((el) => {
-						return (
-							<NavButton
-								link={el.link}
-								key={`navButton${headerLinks.indexOf(el)}`}
-							>
-								{el.text}
-							</NavButton>
-						);
-					})}
+					<div className={styles.mainNavigation}>
+						<Logo hover onClick={() => nav('/')} />
+						{headerLinks.map((el) => {
+							return (
+								<NavButton
+									link={el.link}
+									key={`navButton${headerLinks.indexOf(el)}`}
+								>
+									{el.text}
+								</NavButton>
+							);
+						})}
+					</div>
+					<div className={styles.links}>
+						<a
+							className={styles.outLink}
+							href="https://wa.me/message/HSJOUB5NAG3FD1"
+						>
+							<img
+								src={`${
+									import.meta.env.VITE_PATH_TO_PORTFOLIO
+								}waBwIcon.svg`}
+								height="30px"
+								alt=""
+							/>
+						</a>
+						<a
+							className={styles.outLink}
+							href="https://t.me/arsenykrym"
+						>
+							<img
+								src={`${
+									import.meta.env.VITE_PATH_TO_PORTFOLIO
+								}tgBwIcon.svg`}
+								height="30px"
+								alt=""
+							/>
+						</a>
+					</div>
 				</nav>
 			)}
 		</header>

@@ -1,8 +1,57 @@
 .heroSection {
 	height: 60vh;
+	width: 100%;
+	position: relative;
+	overflow: hidden;
 }
+.contentBox {
+	width: 100%;
+	max-width: 700px;
+	margin-left: 200px;
+}
+
+.title {
+	font-size: var(--font-size-l);
+	line-height: var(--font-size-l);
+	color: var(--font-color-main);
+	font-family: var(--heading-family);
+	margin-bottom: 10px;
+	width: 90%;
+}
+
+.description {
+	font-size: var(--font-size-m);
+	line-height: var(--font-size-m);
+	color: var(--font-color-main);
+	font-family: var(--main-family);
+	margin-bottom: 20px;
+	width: 90%;
+}
+
 .slide {
 	animation: slowScroll 5s linear infinite forwards alternate;
+}
+
+.frontBox {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: #000000c4;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+	z-index: 10;
+	top: 0;
+	left: 0;
+}
+
+.slideWrapper {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	overflow: hidden;
 }
 
 @-webkit-keyframes slowScroll {
@@ -11,5 +60,26 @@
 	}
 	to {
 		background-position: -2em center;
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	.frontBox {
+		align-items: center;
+		padding: 0;
+	}
+	.contentBox {
+		margin: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		padding: 20px;
+	}
+	.description {
+		text-align: center;
+	}
+	.title {
+		text-align: center;
 	}
 }

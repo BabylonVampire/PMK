@@ -1,76 +1,136 @@
-import { FC, memo } from 'react';
+import { memo } from 'react';
 import styles from './Footer.module.scss';
-import { FaTelegram, FaYoutube, FaInstagram } from 'react-icons/fa6';
-import { v4 } from 'uuid';
-import { headerLinks } from '@/db';
-import { phones, emails } from '@/db/contactItems';
-import { Link } from 'react-router-dom';
 
-interface IFooterProps {}
+type TLink = {
+	link: string;
+	heading: string;
+};
 
-const Footer: FC<IFooterProps> = memo(() => {
+const Footer = memo(() => {
 	const date = new Date().getFullYear();
+
+	const links: TLink[] = [
+		{
+			heading: 'Главная',
+			link: '/',
+		},
+		{
+			heading: 'Услуги',
+			link: '/favor',
+		},
+		{
+			heading: 'О нас',
+			link: '/about',
+		},
+		// {
+		// 	heading: 'Статьи',
+		// 	link: '/articles',
+		// },
+		{
+			heading: 'Партнерам',
+			link: '/partners',
+		},
+		{
+			heading: 'Контакты',
+			link: '/contacts',
+		},
+	];
+
 	return (
 		<footer className={styles.footer}>
 			<div className={styles.FooterContainer}>
 				<div className={styles.mainBox}>
 					<ul className={styles.optionsCol}>
 						<div className={styles.colHeading}>Навигация</div>
-						<div className={styles.divider} />
-						{headerLinks.map((link) => {
-							return (
-								<li className={styles.option} key={v4()}>
-									<Link
-										to={link.link}
-										className={styles.link}
+						<div className={styles.innerLinks}>
+							{links.map((link) => {
+								return (
+									<li
+										className={styles.option}
+										key={`footerLink_${link.heading}_${link.link}`}
 									>
-										{link.text}
-									</Link>
-								</li>
-							);
-						})}
+										<a
+											href={link.link}
+											className={styles.link}
+										>
+											{link.heading}
+										</a>
+									</li>
+								);
+							})}
+						</div>
 					</ul>
 
-					<ul className={styles.contactsCol}>
-						<div className={styles.colHeading}>Контакты</div>
-						<div className={styles.divider} />
-						{phones.data.map((phone) => {
-							return (
-								<li className={styles.contact} key={v4()}>
-									{phone}
-								</li>
-							);
-						})}
-						{emails.data.map((email) => {
-							return (
-								<li className={styles.contact} key={v4()}>
-									{email}
-								</li>
-							);
-						})}
+					<div className={styles.longDivider} />
+
+					<ul className={styles.optionsCol}>
+						<div className={styles.innerLinks}>
+							<li className={styles.option}>
+								<p className={styles.colHeading}>Звоните</p>
+
+								<p>+7 (993) 615 77-47</p>
+								<p>+7 (993) 289 38-56</p>
+								<p>+7 (939) 849 00-88</p>
+							</li>
+							<li className={styles.option}>
+								<p className={styles.colHeading}>Пишите</p>
+								pmkrazvitie@yandex.ru
+							</li>
+							<li className={styles.option}>
+								<p className={styles.colHeading}>Часы работы</p>
+								<p>9:00-21:00 ПН-ВС</p>
+							</li>
+							<li className={styles.option}>
+								<p className={styles.colHeading}>
+									Наши мессенджеры
+								</p>
+								<div className={styles.outLinks}>
+									<a
+										className={styles.outLink}
+										href="https://wa.me/message/HSJOUB5NAG3FD1"
+									>
+										<img
+											src={`${
+												import.meta.env
+													.VITE_PATH_TO_PORTFOLIO
+											}waBwIcon.svg`}
+											height="30px"
+											alt=""
+										/>
+									</a>
+									<a
+										className={styles.outLink}
+										href="https://t.me/arsenykrym"
+									>
+										<img
+											src={`${
+												import.meta.env
+													.VITE_PATH_TO_PORTFOLIO
+											}tgBwIcon.svg`}
+											height="30px"
+											alt=""
+										/>
+									</a>
+								</div>
+							</li>
+						</div>
 					</ul>
-					<ul className={styles.linksCol}>
-						<div className={styles.colHeading}>Наши соцсети</div>
-						<div className={styles.divider} />
-						<div className={styles.links}>
-							<li className={styles.outLink}>
-								<FaTelegram />
-							</li>
-							<li className={styles.outLink}>
-								<FaYoutube />
-							</li>
-							<li className={styles.outLink}>
-								<FaInstagram />
+
+					<div className={styles.longDivider} />
+
+					<ul className={styles.optionsCol}>
+						<div
+							className={`${styles.innerLinks} ${styles.copyrightBox}`}
+						>
+							<li className={styles.option}>
+								<p>
+									© {date} Все права защищены. Сделано
+									компанией Gafurov digital Production
+								</p>
 							</li>
 						</div>
 					</ul>
 				</div>
-			</div>
-			<div className={styles.copyright}>
-				<p>
-					© {date} Все права защищены. Сделано компанией Gafurov
-					digital Production
-				</p>
 			</div>
 		</footer>
 	);

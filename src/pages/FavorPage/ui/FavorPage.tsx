@@ -1,12 +1,18 @@
-import { favorCards, favors } from '@/db';
-import { PiMapPinFill } from 'react-icons/pi';
+import { favors, cards } from '@/db';
+// import { PiMapPinFill } from 'react-icons/pi';
 import styles from './FavorPage.module.scss';
 import AboutFavorsSection from './components/AboutFavorsSection/AboutFavorsSection';
 import FavorCards from './components/FavorCards/FavorCards';
 import FavorList from './components/FavorList/FavorList';
-import ProgressBarSection from './components/ProgressBarSection/ProgressBarSection';
+// import ProgressBarSection from './components/ProgressBarSection/ProgressBarSection';
+// import ProgressBarSection from './components/ProgressBarSection/ProgressBarSection';
 
 const FavorPage = () => {
+	const favorCards = cards.map((card) => ({
+		title: card.title,
+		text: card.text,
+		back: card?.back,
+	}));
 	return (
 		<main className={styles.FavorPageWrapper}>
 			<AboutFavorsSection
@@ -14,16 +20,13 @@ const FavorPage = () => {
 				list={[]}
 			/>
 			<FavorCards favorCards={favorCards} />
-			<ProgressBarSection
-				progressBarSteps={[
-					{ stepText: 'asd', text: '0', icon: <PiMapPinFill /> },
-					{ stepText: 'asd', text: '1', icon: <PiMapPinFill /> },
-					{ stepText: 'asd', text: '2', icon: <PiMapPinFill /> },
-					{ stepText: 'asd', text: '3', icon: <PiMapPinFill /> },
-					{ stepText: 'asd', text: '4', icon: <PiMapPinFill /> },
-					{ stepText: 'asd', text: '5', icon: <PiMapPinFill /> },
-				]}
-			/>
+			{/* <ProgressBarSection
+				progressBarSteps={cooperationTabs.map((tab) => ({
+					stepText: tab.tabHeading,
+					text: tab.text,
+					icon: tab.icon,
+				}))}
+			/> */}
 			<FavorList favors={favors} />
 		</main>
 	);

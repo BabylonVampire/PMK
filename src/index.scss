@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap');
+
 :root {
 	--index: calc(1vh + 1vw);
 
@@ -15,7 +17,7 @@
 
 	//Font styles
 	--heading-family: Copperplate;
-	--main-family: CenturyGothic;
+	--main-family: 'Jura';
 	//Font styles
 	--font-size-s: calc(var(--index) * 0.7);
 	--font-size-m: calc(var(--index) * 1);
@@ -42,9 +44,4 @@
 @font-face {
 	font-family: Copperplate;
 	src: url(./assets/fonts/CopperplateGothicBold/Copperplate_Gothic_Bold.ttf);
-}
-
-@font-face {
-	font-family: CenturyGothic;
-	src: url(./assets/fonts/CenturyGothic/centurygothic.ttf);
 }

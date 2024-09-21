@@ -1,100 +1,53 @@
-import { FC, useState } from 'react';
 import styles from './ContactSection.module.scss';
-import Section from '../Section/Section';
-import { Input } from 'antd';
-import emailjs from '@emailjs/browser';
+import FeedbackForm from './FeedbackForm/FeedbackForm';
 
-interface IContactSectionProps {
-	page: 'contacts' | 'partners' | 'about';
-}
-
-const checkPhone = (phone: string) => {
-	return /^\+?(\d[\d\-\\+\\(\\) ]{5,}\d$)/.test(phone);
-};
-
-const { TextArea } = Input;
-
-const ContactSection: FC<IContactSectionProps> = ({ page }) => {
-	const [name, setName] = useState<string>('');
-	const [email, setEmail] = useState<string>('');
-	const [phone, setPhone] = useState<string>('');
-	const [message, setMessage] = useState<string>('');
-
-	const YOUR_SERVICE_ID = 'service_q70p2vb';
-	const YOUR_TEMPLATE_ID = 'template_38qccbo';
-	const YOUR_PUBLIC_KEY = 'Uj0KTkPXkDekWxNX1';
-	const PARAMS = {
-		user: `${name}`,
-		phone: `${phone}`,
-		message: `${message}`,
-		email: `${email}`,
-		page: page,
-	};
-
-	const sendEmail = () => {
-		if (!name || !phone || !email) {
-			return;
-		}
-
-		if (!checkPhone(phone)) {
-			return;
-		}
-		// if (!checkEmail(email)) {
-
-		// 	return;
-		// }
-		else {
-			emailjs.send(
-				YOUR_SERVICE_ID,
-				YOUR_TEMPLATE_ID,
-				PARAMS,
-				YOUR_PUBLIC_KEY
-			);
-		}
-	};
-
+const ContactSection = () => {
 	return (
-		<Section
-			className={styles.ContactSectionWrapper}
-			sectionClassName={styles.contactsSection}
-		>
+		<div className={styles.contactSection}>
 			<div className={styles.innerBox}>
-				<div className={styles.inputForm}>
-					<div className={styles.inputLabel}>Имя</div>
-					<Input
-						value={name}
-						onChange={(e) => setName(e.target.value)}
-					/>
-					<div className={styles.phoneAndEmail}>
-						<div className={styles.group}>
-							<div className={styles.inputLabel}>Телефон</div>
-							<Input
-								value={phone}
-								onChange={(e) => setPhone(e.target.value)}
+				<div className={styles.contactBox}>
+					<h2 className={styles.heading}>Свяжитесь с нами</h2>
+					<p className={styles.description}>
+						Оставьте заявку через сайт или свяжитесь с нами в
+						мессенджере:
+					</p>
+					<p className={styles.email}>pmkrazvitie@yandex.ru</p>
+					<p className={styles.phone}>+7 (993) 615 77-47</p>
+					<div className={styles.links}>
+						<a
+							className={styles.outLink}
+							href="https://wa.me/message/HSJOUB5NAG3FD1"
+						>
+							<img
+								src={`${
+									import.meta.env.VITE_PATH_TO_PORTFOLIO
+								}waBwIcon.svg`}
+								height="30px"
+								alt=""
 							/>
-						</div>
-						<div className={styles.group}>
-							<div className={styles.inputLabel}>
-								Электронная почта
-							</div>
-							<Input
-								value={email}
-								onChange={(e) => setEmail(e.target.value)}
+						</a>
+						<a
+							className={styles.outLink}
+							href="https://t.me/arsenykrym"
+						>
+							<img
+								src={`${
+									import.meta.env.VITE_PATH_TO_PORTFOLIO
+								}tgBwIcon.svg`}
+								height="30px"
+								alt=""
 							/>
-						</div>
+						</a>
 					</div>
-					<div className={styles.inputLabel}>Комментарий</div>
-					<TextArea
-						rows={4}
-						value={message}
-						onChange={(e) => setMessage(e.target.value)}
-					/>
-					<button className={styles.sendButton} onClick={sendEmail}>
-						Отправить
-					</button>
+				</div>
+				<div className={styles.feedbackForm}>
+					<p className={styles.feedbackFormHeading}>
+						Мы свяжемся с вами в ближайшее время!
+					</p>
+					<FeedbackForm />
 				</div>
 			</div>
-		</Section>
+		</div>
 	);
 };
 

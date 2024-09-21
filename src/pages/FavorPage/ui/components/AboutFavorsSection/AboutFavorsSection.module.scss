@@ -12,6 +12,7 @@
 }
 .list {
 	line-height: calc(var(--index) * 1.5);
+	margin-bottom: 20px;
 }
 .listElement {
 	color: var(--font-color-dark);

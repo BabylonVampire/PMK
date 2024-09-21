@@ -1,78 +1,211 @@
-.contactsSection {
+.contactSection {
 	width: 100%;
+	min-height: 50vh;
+	padding-bottom: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
-.ContactSectionWrapper {
-	width: 100%;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	padding: 20px 0;
-}
 .innerBox {
+	padding: 40px 50px;
 	width: 80%;
-	height: 90%;
+	max-width: 1200px;
+	height: 95%;
+	display: flex;
+	flex-direction: row;
+	gap: 20px;
+	border-radius: 20px;
+	background-color: var(--main-color);
+	box-shadow: 0px 1px 4px 1px #000;
+
+	& > * {
+		flex: 1;
+	}
+}
+
+.contactBox {
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+	gap: 30px;
 }
-.inputForm {
-	width: 60%;
-}
-.inputLabel {
-	margin-top: 10px;
-	margin-bottom: 5px;
-	color: var(--font-color-main);
-	font-size: 22px;
+
+.phone,
+.email {
+	font-size: var(--font-size-m);
+	color: var(--font-color-dark);
 	font-family: var(--main-family);
 }
-.sendButton {
-	margin: 0 auto;
-	display: flex;
-	padding: 15px;
-	border-radius: 10px;
-	border: none;
-	background-color: var(--contrast-color-dark);
-	font-family: var(--main-family);
+
+.heading {
+	letter-spacing: 1.5px;
 	font-size: var(--font-size-m);
 	color: var(--font-color-main);
-	cursor: pointer;
-	margin-top: 15px;
-	transition: 0.3s;
-	align-items: center;
-	justify-content: center;
-}
-.sendButton:hover {
-	background-color: var(--contrast-color-main);
-}
-.phoneAndEmail {
-	display: flex;
-	align-items: center;
-	flex-direction: row;
-	justify-content: space-between;
-}
-.group {
-	width: 48%;
+	font-family: var(--main-family);
 }
 
-@media (max-width: 1200px) {
-	.innerBox {
-		width: 100%;
+.description {
+	font-size: var(--font-size-m);
+	color: var(--font-color-dark);
+	font-family: var(--main-family);
+}
+
+.link {
+	font-size: var(--font-size-ml);
+	color: var(--font-color-main);
+	font-family: var(--main-family);
+	text-decoration: none;
+}
+
+.links {
+	position: relative;
+	display: flex;
+	align-items: center;
+	gap: 20px;
+}
+
+.feedbackForm {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width: 100%;
+	gap: 20px;
+
+	&Heading {
+		text-align: center;
+		font-size: var(--font-size-m);
+		color: var(--font-color-main);
+		font-family: var(--heading-family);
 	}
 }
-@media (max-width: 800px) or (max-height: 700px) {
-	.ContactSectionWrapper {
-		margin: 10px 0;
+
+.instagram,
+.telegram,
+.youtube,
+.whatsApp,
+.vkontakte {
+	transition: 0.3s;
+	display: flex;
+	width: 60px;
+	height: 60px;
+	align-items: center;
+	justify-content: center;
+	font-size: var(--font-size-xl);
+	color: var(--font-color-main);
+	cursor: pointer;
+	transition: 0.2s;
+}
+
+.telegram:hover {
+	color: #5ab3ce;
+}
+
+.instagram:hover {
+	color: #cc2366;
+}
+
+.youtube:hover {
+	color: #bb4141;
+}
+
+.whatsApp:hover {
+	color: #1deb2b;
+}
+
+.vkontakte:hover {
+	color: #276090;
+}
+
+.youtube:hover,
+.instagram:hover,
+.telegram:hover,
+.whatsApp:hover,
+.vkontakte:hover {
+	scale: 1.05;
+}
+
+.glowingBtn_1 {
+	animation: pressMe 2s ease-in-out infinite forwards;
+}
+
+.glowingBtn_2 {
+	animation: pressMe 2s ease-in-out 0.5s infinite forwards;
+}
+
+.glowingBtn_3 {
+	animation: pressMe 2s ease-in-out 1s infinite forwards;
+}
+
+@-webkit-keyframes pressMe {
+	from {
+		box-shadow: 0 0 10px 0 #fff;
 	}
-	.inputLabel {
-		font-size: var(--font-size-m);
+
+	50% {
+		box-shadow: 0 0 20px 0 #fff;
 	}
-	.phoneAndEmail {
+
+	to {
+		box-shadow: 0 0 10px 0 #fff;
+	}
+}
+
+@media (max-width: 700px) {
+	.emailIcon,
+	.linkIcon,
+	.phoneIcon {
+		width: 70px;
+		height: 70px;
+	}
+
+	.innerBox {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.contactBox {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.phones,
+	.email,
+	.socialNetwork {
 		flex-direction: column;
 	}
-	.group {
-		width: 100%;
+}
+
+@media (max-width: 600px) {
+	.whatsApp,
+	.instagram,
+	.vkontakte {
+		font-size: calc(var(--font-size-xl) * 1.3);
+	}
+
+	.innerBox {
+		padding: 40px 20px;
+	}
+}
+
+@media (max-width: 1000px) {
+	.innerBox {
+		flex-direction: column;
+	}
+
+	.contactBox {
+		display: flex;
+		align-items: center;
+		text-align: center;
+		margin-bottom: 20px;
+	}
+}
+
+@media (max-width: 400px) {
+	.innerBox {
+		width: 90%;
+		padding: 30px 20px;
 	}
 }

@@ -1,27 +1,28 @@
 import { IAdvantage } from '@/types';
-import {
-	LiaHandshake,
-	LiaUserTieSolid,
-	LiaShieldAltSolid,
-} from 'react-icons/lia';
+import { MdWorkOutline } from 'react-icons/md';
+import { GoProjectRoadmap } from 'react-icons/go';
+import { FaUserTie } from 'react-icons/fa';
 
 export const advantages: IAdvantage[] = [
 	{
 		id: 1,
-		img: <LiaShieldAltSolid />,
-		title: 'Преимущество',
-		description: 'Так мы тоже можем',
+		img: <GoProjectRoadmap />,
+		title: 'Комплексная работа',
+		description:
+			'Комплексное проектирование, как и подключение инженерных систем "под ключ" помогает отдать весь процесс в руки профессионалов, что гарантирует согласованность всех процессов и этапов между собой.',
 	},
 	{
 		id: 2,
-		img: <LiaUserTieSolid />,
-		title: 'Преимущество',
-		description: 'Так мы тоже можем',
+		img: <MdWorkOutline />,
+		title: 'Членство СРО',
+		description:
+			'Наша компания имеет право на подготовку проектной документации в отношении объектов капитального строительства, а наши специалисты выполняют работу исключительно с учетом всех законодательных норм, положений ГОСТ, СНиП, СанПиН и других нормативов, регламентирующих процессы проектирования и монтажа инженерных систем.',
 	},
 	{
 		id: 3,
-		img: <LiaHandshake />,
-		title: 'Преимущество',
-		description: 'Так мы тоже можем',
+		img: <FaUserTie />,
+		title: 'Профессиональный опыт',
+		description:
+			'Мы оказываем услуги в Москве и области уже более 7 лет - наши специалисты точно знают как взаимодействовать со всеми местными эксплуатирующими, ресурсоснабжающими и сетевыми организациями.',
 	},
 ];

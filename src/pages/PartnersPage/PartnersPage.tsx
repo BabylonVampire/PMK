@@ -6,7 +6,7 @@ const PartnersPage = () => {
 	return (
 		<main className={styles.PartnersPageWrapper}>
 			<AboutSection />
-			<ContactSection page="about" />
+			<ContactSection />
 		</main>
 	);
 };

@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import styles from './AboutFavorsSection.module.scss';
+import CallUsButton from '@/components/CallUsButton/CallUsButton';
 
 interface IAboutFavorsSectionProps {
 	text: string;
@@ -23,6 +24,7 @@ const AboutFavorsSection: FC<IAboutFavorsSectionProps> = ({ text, list }) => {
 						);
 					})}
 				</ul>
+				<CallUsButton />
 			</div>
 		</div>
 	);

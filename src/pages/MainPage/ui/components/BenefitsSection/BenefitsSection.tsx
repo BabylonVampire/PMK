@@ -26,12 +26,19 @@ const BenefitsSection: FC<IBenefitsSectionProps> = ({ benefits }) => {
 									key={`benefits${benefits.indexOf(benefit)}`}
 								>
 									<div className={styles.benefitInnerBox}>
-										<div className={styles.icon}>
-											{benefit.icon}
+										<div className={styles.iconAndTitle}>
+											<div className={styles.icon}>
+												{benefit.icon}
+											</div>
+											<div className={styles.text}>
+												{benefit.text}
+											</div>
 										</div>
-										<div className={styles.text}>
-											{benefit.text}
-										</div>
+										{benefit.description && (
+											<p className={styles.description}>
+												{benefit.description}
+											</p>
+										)}
 									</div>
 								</div>
 							);
